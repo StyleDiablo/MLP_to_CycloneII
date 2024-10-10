@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Ohmen\Desktop\Desktop\School\Thesis\mlp_to_fpga\simulation\qsim
+vcyNet
+Z1 !s100 Sc97oME4olUJA2?c4b2@01
+Z2 IigLjVhFPU@27PZ9aJl=:X0
+Z3 Vki9=OT;4h9RgEE;`7X`hY2
+Z4 dC:\Users\Ohmen\Desktop\Desktop\School\Thesis\mlp_to_fpga\simulation\qsim
+Z5 w1711972993
+Z6 8cyNet.vo
+Z7 FcyNet.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|cyNet.vo|
+Z10 o-work work -O0
+Z11 ncy@net
+!i10b 1
+!s85 0
+Z12 !s108 1711973144.929000
+Z13 !s107 cyNet.vo|
+!s101 -O0
+vcyNet_vlg_check_tst
+!i10b 1
+Z14 !s100 Q@GmMd5RBRO=ZPYiRhN2A2
+Z15 IGg6d_XB]Xi^kXMNJQ?G?e0
+Z16 VAo9nR5fk?>B1l:n;3]`:]0
+R4
+Z17 w1711973139
+Z18 8mlp_to_fpga.vt
+Z19 Fmlp_to_fpga.vt
+L0 85
+R8
+r1
+!s85 0
+31
+Z20 !s108 1711973146.064000
+Z21 !s107 mlp_to_fpga.vt|
+Z22 !s90 -work|work|mlp_to_fpga.vt|
+!s101 -O0
+R10
+Z23 ncy@net_vlg_check_tst
+vcyNet_vlg_sample_tst
+!i10b 1
+Z24 !s100 @QG3O07z_A@L6H4>bcLnH1
+Z25 IRBYHgCKc3QfccUO@lM@d22
+Z26 VgJFW65KO>ii3`bik^NeL83
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 ncy@net_vlg_sample_tst
+vcyNet_vlg_vec_tst
+!i10b 1
+Z28 !s100 A1aR547f;U]>_N2Ih1f9a1
+Z29 IAa0E4m`djDK:5^><f0mh]2
+Z30 V8LGQiGS`S7PBaie8XB8m52
+R4
+R17
+R18
+R19
+Z31 L0 1057
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 ncy@net_vlg_vec_tst

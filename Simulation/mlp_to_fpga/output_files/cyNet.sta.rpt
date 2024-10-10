@@ -1,0 +1,1677 @@
+TimeQuest Timing Analyzer report for cyNet
+Wed Oct 02 21:04:43 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 's_axi_aclk'
+ 12. Slow Model Hold: 's_axi_aclk'
+ 13. Slow Model Minimum Pulse Width: 's_axi_aclk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 's_axi_aclk'
+ 24. Fast Model Hold: 's_axi_aclk'
+ 25. Fast Model Minimum Pulse Width: 's_axi_aclk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; cyNet                                                             ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                 ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets        ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------+
+; s_axi_aclk ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { s_axi_aclk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 81.51 MHz ; 81.51 MHz       ; s_axi_aclk ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------+
+; Slow Model Setup Summary             ;
++------------+---------+---------------+
+; Clock      ; Slack   ; End Point TNS ;
++------------+---------+---------------+
+; s_axi_aclk ; -11.268 ; -69221.352    ;
++------------+---------+---------------+
+
+
++------------------------------------+
+; Slow Model Hold Summary            ;
++------------+-------+---------------+
+; Clock      ; Slack ; End Point TNS ;
++------------+-------+---------------+
+; s_axi_aclk ; 0.391 ; 0.000         ;
++------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++------------+--------+------------------+
+; Clock      ; Slack  ; End Point TNS    ;
++------------+--------+------------------+
+; s_axi_aclk ; -1.423 ; -15174.932       ;
++------------+--------+------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 's_axi_aclk'                                                                                                                                                                                                                          ;
++---------+----------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                                                                                                              ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+----------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -11.268 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_27|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.242     ;
+; -11.268 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_27|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.242     ;
+; -11.268 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_27|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.242     ;
+; -11.268 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_27|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.242     ;
+; -11.268 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_27|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.242     ;
+; -11.268 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_27|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.242     ;
+; -11.261 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg0  ; Layer_1:l1|neuron:n_11|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.245     ;
+; -11.261 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg1  ; Layer_1:l1|neuron:n_11|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.245     ;
+; -11.261 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg2  ; Layer_1:l1|neuron:n_11|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.245     ;
+; -11.261 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg3  ; Layer_1:l1|neuron:n_11|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.245     ;
+; -11.261 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg4  ; Layer_1:l1|neuron:n_11|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.245     ;
+; -11.261 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg5  ; Layer_1:l1|neuron:n_11|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.245     ;
+; -11.197 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_27|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.171     ;
+; -11.197 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_27|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.171     ;
+; -11.197 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_27|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.171     ;
+; -11.197 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_27|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.171     ;
+; -11.197 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_27|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.171     ;
+; -11.197 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_27|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.171     ;
+; -11.190 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg0  ; Layer_1:l1|neuron:n_11|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.174     ;
+; -11.190 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg1  ; Layer_1:l1|neuron:n_11|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.174     ;
+; -11.190 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg2  ; Layer_1:l1|neuron:n_11|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.174     ;
+; -11.190 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg3  ; Layer_1:l1|neuron:n_11|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.174     ;
+; -11.190 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg4  ; Layer_1:l1|neuron:n_11|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.174     ;
+; -11.190 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg5  ; Layer_1:l1|neuron:n_11|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.174     ;
+; -11.181 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_2:l2|neuron:n_29|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.155     ;
+; -11.181 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_2:l2|neuron:n_29|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.155     ;
+; -11.181 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_2:l2|neuron:n_29|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.155     ;
+; -11.181 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_2:l2|neuron:n_29|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.155     ;
+; -11.181 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_2:l2|neuron:n_29|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.155     ;
+; -11.181 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_2:l2|neuron:n_29|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.155     ;
+; -11.160 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_31|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.074     ; 12.122     ;
+; -11.160 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_31|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.074     ; 12.122     ;
+; -11.160 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_31|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.074     ; 12.122     ;
+; -11.160 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_31|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.074     ; 12.122     ;
+; -11.160 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_31|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.074     ; 12.122     ;
+; -11.160 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_31|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.074     ; 12.122     ;
+; -11.126 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_27|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.100     ;
+; -11.126 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_27|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.100     ;
+; -11.126 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_27|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.100     ;
+; -11.126 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_27|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.100     ;
+; -11.126 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_27|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.100     ;
+; -11.126 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_27|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.100     ;
+; -11.120 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_36|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.031     ; 12.125     ;
+; -11.120 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_36|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.031     ; 12.125     ;
+; -11.120 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_36|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.031     ; 12.125     ;
+; -11.120 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_36|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.031     ; 12.125     ;
+; -11.120 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_36|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.031     ; 12.125     ;
+; -11.120 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_36|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.031     ; 12.125     ;
+; -11.119 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg0  ; Layer_1:l1|neuron:n_11|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.103     ;
+; -11.119 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg1  ; Layer_1:l1|neuron:n_11|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.103     ;
+; -11.119 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg2  ; Layer_1:l1|neuron:n_11|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.103     ;
+; -11.119 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg3  ; Layer_1:l1|neuron:n_11|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.103     ;
+; -11.119 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg4  ; Layer_1:l1|neuron:n_11|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.103     ;
+; -11.119 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg5  ; Layer_1:l1|neuron:n_11|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.103     ;
+; -11.110 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_2:l2|neuron:n_29|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.084     ;
+; -11.110 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_2:l2|neuron:n_29|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.084     ;
+; -11.110 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_2:l2|neuron:n_29|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.084     ;
+; -11.110 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_2:l2|neuron:n_29|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.084     ;
+; -11.110 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_2:l2|neuron:n_29|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.084     ;
+; -11.110 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_2:l2|neuron:n_29|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.084     ;
+; -11.089 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_31|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.074     ; 12.051     ;
+; -11.089 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_31|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.074     ; 12.051     ;
+; -11.089 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_31|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.074     ; 12.051     ;
+; -11.089 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_31|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.074     ; 12.051     ;
+; -11.089 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_31|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.074     ; 12.051     ;
+; -11.089 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_31|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.074     ; 12.051     ;
+; -11.049 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_36|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.031     ; 12.054     ;
+; -11.049 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_36|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.031     ; 12.054     ;
+; -11.049 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_36|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.031     ; 12.054     ;
+; -11.049 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_36|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.031     ; 12.054     ;
+; -11.049 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_36|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.031     ; 12.054     ;
+; -11.049 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_36|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.031     ; 12.054     ;
+; -11.048 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg0  ; Layer_1:l1|neuron:n_11|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.032     ;
+; -11.048 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg1  ; Layer_1:l1|neuron:n_11|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.032     ;
+; -11.048 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg2  ; Layer_1:l1|neuron:n_11|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.032     ;
+; -11.048 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg3  ; Layer_1:l1|neuron:n_11|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.032     ;
+; -11.048 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg4  ; Layer_1:l1|neuron:n_11|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.032     ;
+; -11.048 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg5  ; Layer_1:l1|neuron:n_11|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.052     ; 12.032     ;
+; -11.047 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_27|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.021     ;
+; -11.047 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_27|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.021     ;
+; -11.047 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_27|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.021     ;
+; -11.047 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_27|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.021     ;
+; -11.047 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_27|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.021     ;
+; -11.047 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_27|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.021     ;
+; -11.041 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_13|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.053     ; 12.024     ;
+; -11.041 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_13|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.053     ; 12.024     ;
+; -11.041 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_13|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.053     ; 12.024     ;
+; -11.041 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_13|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.053     ; 12.024     ;
+; -11.041 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_13|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.053     ; 12.024     ;
+; -11.041 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_13|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.053     ; 12.024     ;
+; -11.039 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_2:l2|neuron:n_29|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.013     ;
+; -11.039 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_2:l2|neuron:n_29|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.013     ;
+; -11.039 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_2:l2|neuron:n_29|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.013     ;
+; -11.039 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_2:l2|neuron:n_29|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.013     ;
+; -11.039 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_2:l2|neuron:n_29|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.013     ;
+; -11.039 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_2:l2|neuron:n_29|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.062     ; 12.013     ;
+; -11.027 ; Layer_1:l1|neuron:n_38|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_uj81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_40|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 11.995     ;
+; -11.027 ; Layer_2:l2|neuron:n_29|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_im81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_2:l2|neuron:n_31|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.072     ; 11.991     ;
+; -11.027 ; Layer_1:l1|neuron:n_38|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_uj81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_40|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 11.995     ;
+; -11.027 ; Layer_1:l1|neuron:n_38|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_uj81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_40|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 11.995     ;
++---------+----------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 's_axi_aclk'                                                                                                                     ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; axi_lite_wrapper:alw|aw_en       ; axi_lite_wrapper:alw|aw_en       ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; axi_lite_wrapper:alw|axi_bvalid  ; axi_lite_wrapper:alw|axi_bvalid  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; axi_lite_wrapper:alw|axi_arready ; axi_lite_wrapper:alw|axi_arready ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; axi_lite_wrapper:alw|axi_rvalid  ; axi_lite_wrapper:alw|axi_rvalid  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; state_1                          ; state_1                          ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; state_2                          ; state_2                          ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; maxFinder:hMax|o_data_valid      ; maxFinder:hMax|o_data_valid      ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[718]                  ; holdData_1[718]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[702]                  ; holdData_1[702]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[686]                  ; holdData_1[686]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[670]                  ; holdData_1[670]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[654]                  ; holdData_1[654]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[638]                  ; holdData_1[638]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[622]                  ; holdData_1[622]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[606]                  ; holdData_1[606]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[590]                  ; holdData_1[590]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[574]                  ; holdData_1[574]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[558]                  ; holdData_1[558]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[542]                  ; holdData_1[542]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[526]                  ; holdData_1[526]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[510]                  ; holdData_1[510]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[494]                  ; holdData_1[494]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[478]                  ; holdData_1[478]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[462]                  ; holdData_1[462]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[446]                  ; holdData_1[446]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[430]                  ; holdData_1[430]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[414]                  ; holdData_1[414]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[398]                  ; holdData_1[398]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[382]                  ; holdData_1[382]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[366]                  ; holdData_1[366]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[350]                  ; holdData_1[350]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[334]                  ; holdData_1[334]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[318]                  ; holdData_1[318]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[302]                  ; holdData_1[302]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[286]                  ; holdData_1[286]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[270]                  ; holdData_1[270]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[254]                  ; holdData_1[254]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[238]                  ; holdData_1[238]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[222]                  ; holdData_1[222]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[206]                  ; holdData_1[206]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[190]                  ; holdData_1[190]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[174]                  ; holdData_1[174]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[158]                  ; holdData_1[158]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[142]                  ; holdData_1[142]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[126]                  ; holdData_1[126]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[110]                  ; holdData_1[110]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[94]                   ; holdData_1[94]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[78]                   ; holdData_1[78]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[62]                   ; holdData_1[62]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[46]                   ; holdData_1[46]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[30]                   ; holdData_1[30]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[14]                   ; holdData_1[14]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[709]                  ; holdData_1[709]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[693]                  ; holdData_1[693]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[677]                  ; holdData_1[677]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[661]                  ; holdData_1[661]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[645]                  ; holdData_1[645]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[629]                  ; holdData_1[629]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[613]                  ; holdData_1[613]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[597]                  ; holdData_1[597]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[581]                  ; holdData_1[581]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[565]                  ; holdData_1[565]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[549]                  ; holdData_1[549]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[533]                  ; holdData_1[533]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[517]                  ; holdData_1[517]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[501]                  ; holdData_1[501]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[485]                  ; holdData_1[485]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[469]                  ; holdData_1[469]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[453]                  ; holdData_1[453]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[437]                  ; holdData_1[437]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[421]                  ; holdData_1[421]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[405]                  ; holdData_1[405]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[389]                  ; holdData_1[389]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[373]                  ; holdData_1[373]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[357]                  ; holdData_1[357]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[341]                  ; holdData_1[341]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[325]                  ; holdData_1[325]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[309]                  ; holdData_1[309]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[293]                  ; holdData_1[293]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[277]                  ; holdData_1[277]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[261]                  ; holdData_1[261]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[245]                  ; holdData_1[245]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[229]                  ; holdData_1[229]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[213]                  ; holdData_1[213]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[197]                  ; holdData_1[197]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[181]                  ; holdData_1[181]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[165]                  ; holdData_1[165]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[149]                  ; holdData_1[149]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[133]                  ; holdData_1[133]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[117]                  ; holdData_1[117]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[101]                  ; holdData_1[101]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[85]                   ; holdData_1[85]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[69]                   ; holdData_1[69]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[53]                   ; holdData_1[53]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[37]                   ; holdData_1[37]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[21]                   ; holdData_1[21]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[13]                   ; holdData_1[13]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[716]                  ; holdData_1[716]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[700]                  ; holdData_1[700]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; holdData_1[684]                  ; holdData_1[684]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.657      ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 's_axi_aclk'                                                                                                                                                                                 ;
++--------+--------------+----------------+------------------+------------+------------+----------------------------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock      ; Clock Edge ; Target                                                                                                                                 ;
++--------+--------------+----------------+------------------+------------+------------+----------------------------------------------------------------------------------------------------------------------------------------+
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_0m81:auto_generated|ram_block1a0~porta_address_reg0  ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_0m81:auto_generated|ram_block1a0~porta_address_reg0  ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_0m81:auto_generated|ram_block1a0~porta_address_reg1  ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_0m81:auto_generated|ram_block1a0~porta_address_reg1  ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_0m81:auto_generated|ram_block1a0~porta_address_reg2  ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_0m81:auto_generated|ram_block1a0~porta_address_reg2  ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_0m81:auto_generated|ram_block1a0~porta_address_reg3  ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_0m81:auto_generated|ram_block1a0~porta_address_reg3  ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_0m81:auto_generated|ram_block1a0~porta_address_reg4  ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_0m81:auto_generated|ram_block1a0~porta_address_reg4  ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_0m81:auto_generated|ram_block1a0~porta_address_reg5  ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_0m81:auto_generated|ram_block1a0~porta_address_reg5  ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[0]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[0]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[10]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[10]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[11]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[11]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[12]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[12]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[13]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[13]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[14]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[14]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[15]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[15]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[16]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[16]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[17]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[17]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[18]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[18]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[19]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[19]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[1]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[1]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[20]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[20]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[21]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[21]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[22]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[22]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[23]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[23]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[24]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[24]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[25]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[25]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[26]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[26]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[27]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[27]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[28]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[28]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[29]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[29]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[2]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[2]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[30]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[30]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[31]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[31]                                                                                                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[3]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[3]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[4]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[4]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[5]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[5]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[6]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[6]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[7]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[7]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[8]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[8]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[9]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[9]                                                                                                           ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_11|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_cm81:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_11|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_cm81:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_11|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_cm81:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_11|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_cm81:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_11|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_cm81:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_11|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_cm81:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_11|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_cm81:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_11|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_cm81:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_11|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_cm81:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_11|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_cm81:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_11|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_cm81:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_11|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_cm81:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg5 ;
++--------+--------------+----------------+------------------+------------+------------+----------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Setup Times                                                                      ;
++--------------------+------------+--------+--------+------------+-----------------+
+; Data Port          ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------------+------------+--------+--------+------------+-----------------+
+; axis_in_data[*]    ; s_axi_aclk ; 7.356  ; 7.356  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[0]   ; s_axi_aclk ; 5.694  ; 5.694  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[1]   ; s_axi_aclk ; 5.718  ; 5.718  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[2]   ; s_axi_aclk ; 7.038  ; 7.038  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[3]   ; s_axi_aclk ; 5.955  ; 5.955  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[4]   ; s_axi_aclk ; 5.381  ; 5.381  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[5]   ; s_axi_aclk ; 5.919  ; 5.919  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[6]   ; s_axi_aclk ; 6.699  ; 6.699  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[7]   ; s_axi_aclk ; 6.827  ; 6.827  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[8]   ; s_axi_aclk ; 5.581  ; 5.581  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[9]   ; s_axi_aclk ; 5.808  ; 5.808  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[10]  ; s_axi_aclk ; 7.356  ; 7.356  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[11]  ; s_axi_aclk ; 5.975  ; 5.975  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[12]  ; s_axi_aclk ; 6.310  ; 6.310  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[13]  ; s_axi_aclk ; 7.049  ; 7.049  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[14]  ; s_axi_aclk ; 6.391  ; 6.391  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[15]  ; s_axi_aclk ; 6.378  ; 6.378  ; Rise       ; s_axi_aclk      ;
+; axis_in_data_valid ; s_axi_aclk ; 7.206  ; 7.206  ; Rise       ; s_axi_aclk      ;
+; s_axi_araddr[*]    ; s_axi_aclk ; 5.176  ; 5.176  ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[2]   ; s_axi_aclk ; 5.176  ; 5.176  ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[3]   ; s_axi_aclk ; 4.316  ; 4.316  ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[4]   ; s_axi_aclk ; 4.510  ; 4.510  ; Rise       ; s_axi_aclk      ;
+; s_axi_aresetn      ; s_axi_aclk ; 12.736 ; 12.736 ; Rise       ; s_axi_aclk      ;
+; s_axi_arvalid      ; s_axi_aclk ; 8.958  ; 8.958  ; Rise       ; s_axi_aclk      ;
+; s_axi_awaddr[*]    ; s_axi_aclk ; 5.478  ; 5.478  ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[2]   ; s_axi_aclk ; 5.478  ; 5.478  ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[3]   ; s_axi_aclk ; 5.422  ; 5.422  ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[4]   ; s_axi_aclk ; 4.411  ; 4.411  ; Rise       ; s_axi_aclk      ;
+; s_axi_awvalid      ; s_axi_aclk ; 9.958  ; 9.958  ; Rise       ; s_axi_aclk      ;
+; s_axi_bready       ; s_axi_aclk ; 6.255  ; 6.255  ; Rise       ; s_axi_aclk      ;
+; s_axi_rready       ; s_axi_aclk ; 6.269  ; 6.269  ; Rise       ; s_axi_aclk      ;
+; s_axi_wdata[*]     ; s_axi_aclk ; 9.733  ; 9.733  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[0]    ; s_axi_aclk ; 7.602  ; 7.602  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[1]    ; s_axi_aclk ; 9.733  ; 9.733  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[2]    ; s_axi_aclk ; 7.247  ; 7.247  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[3]    ; s_axi_aclk ; 8.011  ; 8.011  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[4]    ; s_axi_aclk ; 8.176  ; 8.176  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[5]    ; s_axi_aclk ; 6.704  ; 6.704  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[6]    ; s_axi_aclk ; 7.585  ; 7.585  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[7]    ; s_axi_aclk ; 7.524  ; 7.524  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[8]    ; s_axi_aclk ; 8.395  ; 8.395  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[9]    ; s_axi_aclk ; 7.110  ; 7.110  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[10]   ; s_axi_aclk ; 7.547  ; 7.547  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[11]   ; s_axi_aclk ; 6.395  ; 6.395  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[12]   ; s_axi_aclk ; 6.867  ; 6.867  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[13]   ; s_axi_aclk ; 5.725  ; 5.725  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[14]   ; s_axi_aclk ; 7.213  ; 7.213  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[15]   ; s_axi_aclk ; 8.164  ; 8.164  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[16]   ; s_axi_aclk ; 7.900  ; 7.900  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[17]   ; s_axi_aclk ; 8.133  ; 8.133  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[18]   ; s_axi_aclk ; 7.007  ; 7.007  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[19]   ; s_axi_aclk ; 8.813  ; 8.813  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[20]   ; s_axi_aclk ; 8.705  ; 8.705  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[21]   ; s_axi_aclk ; 6.758  ; 6.758  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[22]   ; s_axi_aclk ; 7.478  ; 7.478  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[23]   ; s_axi_aclk ; 8.413  ; 8.413  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[24]   ; s_axi_aclk ; 6.013  ; 6.013  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[25]   ; s_axi_aclk ; 9.538  ; 9.538  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[26]   ; s_axi_aclk ; 8.405  ; 8.405  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[27]   ; s_axi_aclk ; 7.896  ; 7.896  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[28]   ; s_axi_aclk ; 7.580  ; 7.580  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[29]   ; s_axi_aclk ; 7.158  ; 7.158  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[30]   ; s_axi_aclk ; 8.166  ; 8.166  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[31]   ; s_axi_aclk ; 7.414  ; 7.414  ; Rise       ; s_axi_aclk      ;
+; s_axi_wvalid       ; s_axi_aclk ; 10.241 ; 10.241 ; Rise       ; s_axi_aclk      ;
++--------------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Hold Times                                                                       ;
++--------------------+------------+--------+--------+------------+-----------------+
+; Data Port          ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------------+------------+--------+--------+------------+-----------------+
+; axis_in_data[*]    ; s_axi_aclk ; -3.486 ; -3.486 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[0]   ; s_axi_aclk ; -3.486 ; -3.486 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[1]   ; s_axi_aclk ; -4.391 ; -4.391 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[2]   ; s_axi_aclk ; -4.436 ; -4.436 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[3]   ; s_axi_aclk ; -4.425 ; -4.425 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[4]   ; s_axi_aclk ; -3.842 ; -3.842 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[5]   ; s_axi_aclk ; -3.899 ; -3.899 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[6]   ; s_axi_aclk ; -4.338 ; -4.338 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[7]   ; s_axi_aclk ; -3.801 ; -3.801 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[8]   ; s_axi_aclk ; -4.144 ; -4.144 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[9]   ; s_axi_aclk ; -4.232 ; -4.232 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[10]  ; s_axi_aclk ; -4.491 ; -4.491 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[11]  ; s_axi_aclk ; -4.075 ; -4.075 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[12]  ; s_axi_aclk ; -4.413 ; -4.413 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[13]  ; s_axi_aclk ; -3.792 ; -3.792 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[14]  ; s_axi_aclk ; -4.109 ; -4.109 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[15]  ; s_axi_aclk ; -3.797 ; -3.797 ; Rise       ; s_axi_aclk      ;
+; axis_in_data_valid ; s_axi_aclk ; -4.727 ; -4.727 ; Rise       ; s_axi_aclk      ;
+; s_axi_araddr[*]    ; s_axi_aclk ; -4.086 ; -4.086 ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[2]   ; s_axi_aclk ; -4.946 ; -4.946 ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[3]   ; s_axi_aclk ; -4.086 ; -4.086 ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[4]   ; s_axi_aclk ; -4.280 ; -4.280 ; Rise       ; s_axi_aclk      ;
+; s_axi_aresetn      ; s_axi_aclk ; -3.715 ; -3.715 ; Rise       ; s_axi_aclk      ;
+; s_axi_arvalid      ; s_axi_aclk ; -5.535 ; -5.535 ; Rise       ; s_axi_aclk      ;
+; s_axi_awaddr[*]    ; s_axi_aclk ; -4.181 ; -4.181 ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[2]   ; s_axi_aclk ; -5.248 ; -5.248 ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[3]   ; s_axi_aclk ; -5.192 ; -5.192 ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[4]   ; s_axi_aclk ; -4.181 ; -4.181 ; Rise       ; s_axi_aclk      ;
+; s_axi_awvalid      ; s_axi_aclk ; -4.975 ; -4.975 ; Rise       ; s_axi_aclk      ;
+; s_axi_bready       ; s_axi_aclk ; -5.629 ; -5.629 ; Rise       ; s_axi_aclk      ;
+; s_axi_rready       ; s_axi_aclk ; -4.344 ; -4.344 ; Rise       ; s_axi_aclk      ;
+; s_axi_wdata[*]     ; s_axi_aclk ; -4.229 ; -4.229 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[0]    ; s_axi_aclk ; -6.373 ; -6.373 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[1]    ; s_axi_aclk ; -5.868 ; -5.868 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[2]    ; s_axi_aclk ; -4.229 ; -4.229 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[3]    ; s_axi_aclk ; -5.508 ; -5.508 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[4]    ; s_axi_aclk ; -4.991 ; -4.991 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[5]    ; s_axi_aclk ; -5.157 ; -5.157 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[6]    ; s_axi_aclk ; -5.718 ; -5.718 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[7]    ; s_axi_aclk ; -6.239 ; -6.239 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[8]    ; s_axi_aclk ; -6.494 ; -6.494 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[9]    ; s_axi_aclk ; -5.475 ; -5.475 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[10]   ; s_axi_aclk ; -5.998 ; -5.998 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[11]   ; s_axi_aclk ; -5.108 ; -5.108 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[12]   ; s_axi_aclk ; -5.815 ; -5.815 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[13]   ; s_axi_aclk ; -4.776 ; -4.776 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[14]   ; s_axi_aclk ; -5.636 ; -5.636 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[15]   ; s_axi_aclk ; -7.122 ; -7.122 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[16]   ; s_axi_aclk ; -6.225 ; -6.225 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[17]   ; s_axi_aclk ; -5.853 ; -5.853 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[18]   ; s_axi_aclk ; -5.467 ; -5.467 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[19]   ; s_axi_aclk ; -7.884 ; -7.884 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[20]   ; s_axi_aclk ; -6.615 ; -6.615 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[21]   ; s_axi_aclk ; -5.714 ; -5.714 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[22]   ; s_axi_aclk ; -6.633 ; -6.633 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[23]   ; s_axi_aclk ; -7.366 ; -7.366 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[24]   ; s_axi_aclk ; -5.075 ; -5.075 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[25]   ; s_axi_aclk ; -8.143 ; -8.143 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[26]   ; s_axi_aclk ; -6.337 ; -6.337 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[27]   ; s_axi_aclk ; -7.227 ; -7.227 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[28]   ; s_axi_aclk ; -6.676 ; -6.676 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[29]   ; s_axi_aclk ; -5.062 ; -5.062 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[30]   ; s_axi_aclk ; -7.204 ; -7.204 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[31]   ; s_axi_aclk ; -6.969 ; -6.969 ; Rise       ; s_axi_aclk      ;
+; s_axi_wvalid       ; s_axi_aclk ; -5.254 ; -5.254 ; Rise       ; s_axi_aclk      ;
++--------------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Clock to Output Times                                                          ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; intr             ; s_axi_aclk ; 8.496  ; 8.496  ; Rise       ; s_axi_aclk      ;
+; s_axi_arready    ; s_axi_aclk ; 8.963  ; 8.963  ; Rise       ; s_axi_aclk      ;
+; s_axi_awready    ; s_axi_aclk ; 9.474  ; 9.474  ; Rise       ; s_axi_aclk      ;
+; s_axi_bvalid     ; s_axi_aclk ; 9.282  ; 9.282  ; Rise       ; s_axi_aclk      ;
+; s_axi_rdata[*]   ; s_axi_aclk ; 11.830 ; 11.830 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[0]  ; s_axi_aclk ; 9.373  ; 9.373  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[1]  ; s_axi_aclk ; 8.304  ; 8.304  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[2]  ; s_axi_aclk ; 9.610  ; 9.610  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[3]  ; s_axi_aclk ; 7.651  ; 7.651  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[4]  ; s_axi_aclk ; 8.800  ; 8.800  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[5]  ; s_axi_aclk ; 11.033 ; 11.033 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[6]  ; s_axi_aclk ; 7.955  ; 7.955  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[7]  ; s_axi_aclk ; 8.160  ; 8.160  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[8]  ; s_axi_aclk ; 10.039 ; 10.039 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[9]  ; s_axi_aclk ; 10.181 ; 10.181 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[10] ; s_axi_aclk ; 7.867  ; 7.867  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[11] ; s_axi_aclk ; 9.739  ; 9.739  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[12] ; s_axi_aclk ; 10.158 ; 10.158 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[13] ; s_axi_aclk ; 9.250  ; 9.250  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[14] ; s_axi_aclk ; 8.713  ; 8.713  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[15] ; s_axi_aclk ; 10.696 ; 10.696 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[16] ; s_axi_aclk ; 11.830 ; 11.830 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[17] ; s_axi_aclk ; 9.837  ; 9.837  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[18] ; s_axi_aclk ; 7.811  ; 7.811  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[19] ; s_axi_aclk ; 10.286 ; 10.286 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[20] ; s_axi_aclk ; 8.259  ; 8.259  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[21] ; s_axi_aclk ; 11.127 ; 11.127 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[22] ; s_axi_aclk ; 9.173  ; 9.173  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[23] ; s_axi_aclk ; 10.674 ; 10.674 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[24] ; s_axi_aclk ; 10.751 ; 10.751 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[25] ; s_axi_aclk ; 11.683 ; 11.683 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[26] ; s_axi_aclk ; 10.414 ; 10.414 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[27] ; s_axi_aclk ; 10.171 ; 10.171 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[28] ; s_axi_aclk ; 11.340 ; 11.340 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[29] ; s_axi_aclk ; 8.016  ; 8.016  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[30] ; s_axi_aclk ; 8.521  ; 8.521  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[31] ; s_axi_aclk ; 11.693 ; 11.693 ; Rise       ; s_axi_aclk      ;
+; s_axi_rvalid     ; s_axi_aclk ; 10.345 ; 10.345 ; Rise       ; s_axi_aclk      ;
+; s_axi_wready     ; s_axi_aclk ; 9.504  ; 9.504  ; Rise       ; s_axi_aclk      ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                  ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; intr             ; s_axi_aclk ; 8.496  ; 8.496  ; Rise       ; s_axi_aclk      ;
+; s_axi_arready    ; s_axi_aclk ; 8.963  ; 8.963  ; Rise       ; s_axi_aclk      ;
+; s_axi_awready    ; s_axi_aclk ; 9.474  ; 9.474  ; Rise       ; s_axi_aclk      ;
+; s_axi_bvalid     ; s_axi_aclk ; 9.282  ; 9.282  ; Rise       ; s_axi_aclk      ;
+; s_axi_rdata[*]   ; s_axi_aclk ; 7.651  ; 7.651  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[0]  ; s_axi_aclk ; 9.373  ; 9.373  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[1]  ; s_axi_aclk ; 8.304  ; 8.304  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[2]  ; s_axi_aclk ; 9.610  ; 9.610  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[3]  ; s_axi_aclk ; 7.651  ; 7.651  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[4]  ; s_axi_aclk ; 8.800  ; 8.800  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[5]  ; s_axi_aclk ; 11.033 ; 11.033 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[6]  ; s_axi_aclk ; 7.955  ; 7.955  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[7]  ; s_axi_aclk ; 8.160  ; 8.160  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[8]  ; s_axi_aclk ; 10.039 ; 10.039 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[9]  ; s_axi_aclk ; 10.181 ; 10.181 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[10] ; s_axi_aclk ; 7.867  ; 7.867  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[11] ; s_axi_aclk ; 9.739  ; 9.739  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[12] ; s_axi_aclk ; 10.158 ; 10.158 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[13] ; s_axi_aclk ; 9.250  ; 9.250  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[14] ; s_axi_aclk ; 8.713  ; 8.713  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[15] ; s_axi_aclk ; 10.696 ; 10.696 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[16] ; s_axi_aclk ; 11.830 ; 11.830 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[17] ; s_axi_aclk ; 9.837  ; 9.837  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[18] ; s_axi_aclk ; 7.811  ; 7.811  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[19] ; s_axi_aclk ; 10.286 ; 10.286 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[20] ; s_axi_aclk ; 8.259  ; 8.259  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[21] ; s_axi_aclk ; 11.127 ; 11.127 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[22] ; s_axi_aclk ; 9.173  ; 9.173  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[23] ; s_axi_aclk ; 10.674 ; 10.674 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[24] ; s_axi_aclk ; 10.751 ; 10.751 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[25] ; s_axi_aclk ; 11.683 ; 11.683 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[26] ; s_axi_aclk ; 10.414 ; 10.414 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[27] ; s_axi_aclk ; 10.171 ; 10.171 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[28] ; s_axi_aclk ; 11.340 ; 11.340 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[29] ; s_axi_aclk ; 8.016  ; 8.016  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[30] ; s_axi_aclk ; 8.521  ; 8.521  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[31] ; s_axi_aclk ; 11.693 ; 11.693 ; Rise       ; s_axi_aclk      ;
+; s_axi_rvalid     ; s_axi_aclk ; 10.345 ; 10.345 ; Rise       ; s_axi_aclk      ;
+; s_axi_wready     ; s_axi_aclk ; 9.504  ; 9.504  ; Rise       ; s_axi_aclk      ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------+
+; Fast Model Setup Summary            ;
++------------+--------+---------------+
+; Clock      ; Slack  ; End Point TNS ;
++------------+--------+---------------+
+; s_axi_aclk ; -5.197 ; -27174.342    ;
++------------+--------+---------------+
+
+
++------------------------------------+
+; Fast Model Hold Summary            ;
++------------+-------+---------------+
+; Clock      ; Slack ; End Point TNS ;
++------------+-------+---------------+
+; s_axi_aclk ; 0.215 ; 0.000         ;
++------------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++------------+--------+------------------+
+; Clock      ; Slack  ; End Point TNS    ;
++------------+--------+------------------+
+; s_axi_aclk ; -1.519 ; -15492.500       ;
++------------+--------+------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 's_axi_aclk'                                                                                                                                                                                                                         ;
++--------+----------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                                              ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -5.197 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_31|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.153      ;
+; -5.197 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_31|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.153      ;
+; -5.197 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_31|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.153      ;
+; -5.197 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_31|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.153      ;
+; -5.197 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_31|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.153      ;
+; -5.197 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_31|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.153      ;
+; -5.162 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_31|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.118      ;
+; -5.162 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_31|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.118      ;
+; -5.162 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_31|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.118      ;
+; -5.162 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_31|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.118      ;
+; -5.162 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_31|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.118      ;
+; -5.162 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_31|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.118      ;
+; -5.127 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_31|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.083      ;
+; -5.127 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_31|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.083      ;
+; -5.127 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_31|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.083      ;
+; -5.127 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_31|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.083      ;
+; -5.127 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_31|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.083      ;
+; -5.127 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_31|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.083      ;
+; -5.091 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_13|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.062      ;
+; -5.091 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_13|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.062      ;
+; -5.091 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_13|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.062      ;
+; -5.091 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_13|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.062      ;
+; -5.091 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_13|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.062      ;
+; -5.091 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_13|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.062      ;
+; -5.088 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_31|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.044      ;
+; -5.088 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_31|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.044      ;
+; -5.088 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_31|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.044      ;
+; -5.088 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_31|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.044      ;
+; -5.088 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_31|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.044      ;
+; -5.088 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_31|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 6.044      ;
+; -5.069 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_2:l2|neuron:n_29|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 6.033      ;
+; -5.069 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_2:l2|neuron:n_29|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 6.033      ;
+; -5.069 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_2:l2|neuron:n_29|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 6.033      ;
+; -5.069 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_2:l2|neuron:n_29|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 6.033      ;
+; -5.069 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_2:l2|neuron:n_29|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 6.033      ;
+; -5.069 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_2:l2|neuron:n_29|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 6.033      ;
+; -5.056 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_13|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.027      ;
+; -5.056 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_13|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.027      ;
+; -5.056 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_13|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.027      ;
+; -5.056 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_13|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.027      ;
+; -5.056 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_13|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.027      ;
+; -5.056 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_13|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.027      ;
+; -5.036 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_27|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.069     ; 5.999      ;
+; -5.036 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_27|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.069     ; 5.999      ;
+; -5.036 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_27|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.069     ; 5.999      ;
+; -5.036 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_27|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.069     ; 5.999      ;
+; -5.036 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_27|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.069     ; 5.999      ;
+; -5.036 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_27|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.069     ; 5.999      ;
+; -5.034 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_2:l2|neuron:n_29|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 5.998      ;
+; -5.034 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_2:l2|neuron:n_29|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 5.998      ;
+; -5.034 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_2:l2|neuron:n_29|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 5.998      ;
+; -5.034 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_2:l2|neuron:n_29|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 5.998      ;
+; -5.034 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_2:l2|neuron:n_29|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 5.998      ;
+; -5.034 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_2:l2|neuron:n_29|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 5.998      ;
+; -5.030 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg0  ; Layer_1:l1|neuron:n_11|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.001      ;
+; -5.030 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg1  ; Layer_1:l1|neuron:n_11|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.001      ;
+; -5.030 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg2  ; Layer_1:l1|neuron:n_11|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.001      ;
+; -5.030 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg3  ; Layer_1:l1|neuron:n_11|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.001      ;
+; -5.030 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg4  ; Layer_1:l1|neuron:n_11|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.001      ;
+; -5.030 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg5  ; Layer_1:l1|neuron:n_11|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 6.001      ;
+; -5.021 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_13|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.992      ;
+; -5.021 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_13|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.992      ;
+; -5.021 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_13|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.992      ;
+; -5.021 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_13|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.992      ;
+; -5.021 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_13|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.992      ;
+; -5.021 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_13|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.992      ;
+; -5.006 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_31|mul[27] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 5.962      ;
+; -5.006 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_31|mul[27] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 5.962      ;
+; -5.006 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_31|mul[27] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 5.962      ;
+; -5.006 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_31|mul[27] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 5.962      ;
+; -5.006 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_31|mul[27] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 5.962      ;
+; -5.006 ; Layer_1:l1|neuron:n_31|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_8g81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_31|mul[27] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.076     ; 5.962      ;
+; -5.002 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_36|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.040     ; 5.994      ;
+; -5.002 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_36|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.040     ; 5.994      ;
+; -5.002 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_36|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.040     ; 5.994      ;
+; -5.002 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_36|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.040     ; 5.994      ;
+; -5.002 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_36|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.040     ; 5.994      ;
+; -5.002 ; Layer_1:l1|neuron:n_34|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_il81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_36|mul[31] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.040     ; 5.994      ;
+; -5.001 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_27|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.069     ; 5.964      ;
+; -5.001 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_27|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.069     ; 5.964      ;
+; -5.001 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_27|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.069     ; 5.964      ;
+; -5.001 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_27|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.069     ; 5.964      ;
+; -5.001 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_1:l1|neuron:n_27|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.069     ; 5.964      ;
+; -5.001 ; Layer_1:l1|neuron:n_25|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_jk81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_1:l1|neuron:n_27|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.069     ; 5.964      ;
+; -4.999 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_2:l2|neuron:n_29|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 5.963      ;
+; -4.999 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_2:l2|neuron:n_29|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 5.963      ;
+; -4.999 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_2:l2|neuron:n_29|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 5.963      ;
+; -4.999 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_2:l2|neuron:n_29|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 5.963      ;
+; -4.999 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg4 ; Layer_2:l2|neuron:n_29|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 5.963      ;
+; -4.999 ; Layer_2:l2|neuron:n_27|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hm81:auto_generated|ram_block1a0~porta_address_reg5 ; Layer_2:l2|neuron:n_29|mul[29] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.068     ; 5.963      ;
+; -4.995 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg0  ; Layer_1:l1|neuron:n_11|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.966      ;
+; -4.995 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg1  ; Layer_1:l1|neuron:n_11|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.966      ;
+; -4.995 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg2  ; Layer_1:l1|neuron:n_11|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.966      ;
+; -4.995 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg3  ; Layer_1:l1|neuron:n_11|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.966      ;
+; -4.995 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg4  ; Layer_1:l1|neuron:n_11|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.966      ;
+; -4.995 ; Layer_1:l1|neuron:n_8|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_rk81:auto_generated|ram_block1a0~porta_address_reg5  ; Layer_1:l1|neuron:n_11|mul[30] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.966      ;
+; -4.986 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg0 ; Layer_1:l1|neuron:n_13|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.957      ;
+; -4.986 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg1 ; Layer_1:l1|neuron:n_13|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.957      ;
+; -4.986 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg2 ; Layer_1:l1|neuron:n_13|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.957      ;
+; -4.986 ; Layer_1:l1|neuron:n_13|Weight_Memory:weight_memory|altsyncram:mem_rtl_0|altsyncram_hj81:auto_generated|ram_block1a0~porta_address_reg3 ; Layer_1:l1|neuron:n_13|mul[28] ; s_axi_aclk   ; s_axi_aclk  ; 1.000        ; -0.061     ; 5.957      ;
++--------+----------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 's_axi_aclk'                                                                                                                     ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; axi_lite_wrapper:alw|aw_en       ; axi_lite_wrapper:alw|aw_en       ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; axi_lite_wrapper:alw|axi_bvalid  ; axi_lite_wrapper:alw|axi_bvalid  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; axi_lite_wrapper:alw|axi_arready ; axi_lite_wrapper:alw|axi_arready ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; axi_lite_wrapper:alw|axi_rvalid  ; axi_lite_wrapper:alw|axi_rvalid  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; state_1                          ; state_1                          ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; state_2                          ; state_2                          ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; maxFinder:hMax|o_data_valid      ; maxFinder:hMax|o_data_valid      ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[718]                  ; holdData_1[718]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[702]                  ; holdData_1[702]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[686]                  ; holdData_1[686]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[670]                  ; holdData_1[670]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[654]                  ; holdData_1[654]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[638]                  ; holdData_1[638]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[622]                  ; holdData_1[622]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[606]                  ; holdData_1[606]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[590]                  ; holdData_1[590]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[574]                  ; holdData_1[574]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[558]                  ; holdData_1[558]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[542]                  ; holdData_1[542]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[526]                  ; holdData_1[526]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[510]                  ; holdData_1[510]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[494]                  ; holdData_1[494]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[478]                  ; holdData_1[478]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[462]                  ; holdData_1[462]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[446]                  ; holdData_1[446]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[430]                  ; holdData_1[430]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[414]                  ; holdData_1[414]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[398]                  ; holdData_1[398]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[382]                  ; holdData_1[382]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[366]                  ; holdData_1[366]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[350]                  ; holdData_1[350]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[334]                  ; holdData_1[334]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[318]                  ; holdData_1[318]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[302]                  ; holdData_1[302]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[286]                  ; holdData_1[286]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[270]                  ; holdData_1[270]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[254]                  ; holdData_1[254]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[238]                  ; holdData_1[238]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[222]                  ; holdData_1[222]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[206]                  ; holdData_1[206]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[190]                  ; holdData_1[190]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[174]                  ; holdData_1[174]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[158]                  ; holdData_1[158]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[142]                  ; holdData_1[142]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[126]                  ; holdData_1[126]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[110]                  ; holdData_1[110]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[94]                   ; holdData_1[94]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[78]                   ; holdData_1[78]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[62]                   ; holdData_1[62]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[46]                   ; holdData_1[46]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[30]                   ; holdData_1[30]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[14]                   ; holdData_1[14]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[709]                  ; holdData_1[709]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[693]                  ; holdData_1[693]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[677]                  ; holdData_1[677]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[661]                  ; holdData_1[661]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[645]                  ; holdData_1[645]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[629]                  ; holdData_1[629]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[613]                  ; holdData_1[613]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[597]                  ; holdData_1[597]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[581]                  ; holdData_1[581]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[565]                  ; holdData_1[565]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[549]                  ; holdData_1[549]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[533]                  ; holdData_1[533]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[517]                  ; holdData_1[517]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[501]                  ; holdData_1[501]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[485]                  ; holdData_1[485]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[469]                  ; holdData_1[469]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[453]                  ; holdData_1[453]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[437]                  ; holdData_1[437]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[421]                  ; holdData_1[421]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[405]                  ; holdData_1[405]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[389]                  ; holdData_1[389]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[373]                  ; holdData_1[373]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[357]                  ; holdData_1[357]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[341]                  ; holdData_1[341]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[325]                  ; holdData_1[325]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[309]                  ; holdData_1[309]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[293]                  ; holdData_1[293]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[277]                  ; holdData_1[277]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[261]                  ; holdData_1[261]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[245]                  ; holdData_1[245]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[229]                  ; holdData_1[229]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[213]                  ; holdData_1[213]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[197]                  ; holdData_1[197]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[181]                  ; holdData_1[181]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[165]                  ; holdData_1[165]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[149]                  ; holdData_1[149]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[133]                  ; holdData_1[133]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[117]                  ; holdData_1[117]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[101]                  ; holdData_1[101]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[85]                   ; holdData_1[85]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[69]                   ; holdData_1[69]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[53]                   ; holdData_1[53]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[37]                   ; holdData_1[37]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[21]                   ; holdData_1[21]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[13]                   ; holdData_1[13]                   ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[716]                  ; holdData_1[716]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[700]                  ; holdData_1[700]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; holdData_1[684]                  ; holdData_1[684]                  ; s_axi_aclk   ; s_axi_aclk  ; 0.000        ; 0.000      ; 0.367      ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 's_axi_aclk'                                                                        ;
++--------+--------------+----------------+------------------+------------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock      ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+------------+------------+-------------------------------+
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[0]  ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[0]  ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[10] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[10] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[11] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[11] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[12] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[12] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[13] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[13] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[14] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[14] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[15] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[15] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[16] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[16] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[17] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[17] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[18] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[18] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[19] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[19] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[1]  ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[1]  ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[20] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[20] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[21] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[21] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[22] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[22] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[23] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[23] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[24] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[24] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[25] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[25] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[26] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[26] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[27] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[27] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[28] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[28] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[29] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[29] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[2]  ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[2]  ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[30] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[30] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[31] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[31] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[3]  ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[3]  ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[4]  ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[4]  ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[5]  ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[5]  ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[6]  ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[6]  ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[7]  ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[7]  ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[8]  ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[8]  ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[9]  ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_0|mul[9]  ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[0]  ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[0]  ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[10] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[10] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[11] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[11] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[12] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[12] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[13] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[13] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[14] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[14] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[15] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[15] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[16] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[16] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[17] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[17] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[18] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[18] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[19] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[19] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[1]  ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[1]  ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[20] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[20] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[21] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[21] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[22] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[22] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[23] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[23] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[24] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[24] ;
+; -1.519 ; 0.500        ; 2.019          ; High Pulse Width ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[25] ;
+; -1.519 ; 0.500        ; 2.019          ; Low Pulse Width  ; s_axi_aclk ; Rise       ; Layer_1:l1|neuron:n_1|mul[25] ;
++--------+--------------+----------------+------------------+------------+------------+-------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Setup Times                                                                    ;
++--------------------+------------+-------+-------+------------+-----------------+
+; Data Port          ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------------+------------+-------+-------+------------+-----------------+
+; axis_in_data[*]    ; s_axi_aclk ; 3.805 ; 3.805 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[0]   ; s_axi_aclk ; 2.946 ; 2.946 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[1]   ; s_axi_aclk ; 3.025 ; 3.025 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[2]   ; s_axi_aclk ; 3.547 ; 3.547 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[3]   ; s_axi_aclk ; 3.054 ; 3.054 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[4]   ; s_axi_aclk ; 2.822 ; 2.822 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[5]   ; s_axi_aclk ; 3.028 ; 3.028 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[6]   ; s_axi_aclk ; 3.435 ; 3.435 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[7]   ; s_axi_aclk ; 3.470 ; 3.470 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[8]   ; s_axi_aclk ; 2.906 ; 2.906 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[9]   ; s_axi_aclk ; 3.013 ; 3.013 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[10]  ; s_axi_aclk ; 3.805 ; 3.805 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[11]  ; s_axi_aclk ; 3.024 ; 3.024 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[12]  ; s_axi_aclk ; 3.208 ; 3.208 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[13]  ; s_axi_aclk ; 3.570 ; 3.570 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[14]  ; s_axi_aclk ; 3.201 ; 3.201 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[15]  ; s_axi_aclk ; 3.218 ; 3.218 ; Rise       ; s_axi_aclk      ;
+; axis_in_data_valid ; s_axi_aclk ; 3.813 ; 3.813 ; Rise       ; s_axi_aclk      ;
+; s_axi_araddr[*]    ; s_axi_aclk ; 2.772 ; 2.772 ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[2]   ; s_axi_aclk ; 2.772 ; 2.772 ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[3]   ; s_axi_aclk ; 2.319 ; 2.319 ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[4]   ; s_axi_aclk ; 2.442 ; 2.442 ; Rise       ; s_axi_aclk      ;
+; s_axi_aresetn      ; s_axi_aclk ; 6.356 ; 6.356 ; Rise       ; s_axi_aclk      ;
+; s_axi_arvalid      ; s_axi_aclk ; 4.627 ; 4.627 ; Rise       ; s_axi_aclk      ;
+; s_axi_awaddr[*]    ; s_axi_aclk ; 2.952 ; 2.952 ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[2]   ; s_axi_aclk ; 2.952 ; 2.952 ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[3]   ; s_axi_aclk ; 2.897 ; 2.897 ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[4]   ; s_axi_aclk ; 2.322 ; 2.322 ; Rise       ; s_axi_aclk      ;
+; s_axi_awvalid      ; s_axi_aclk ; 5.100 ; 5.100 ; Rise       ; s_axi_aclk      ;
+; s_axi_bready       ; s_axi_aclk ; 3.310 ; 3.310 ; Rise       ; s_axi_aclk      ;
+; s_axi_rready       ; s_axi_aclk ; 3.255 ; 3.255 ; Rise       ; s_axi_aclk      ;
+; s_axi_wdata[*]     ; s_axi_aclk ; 5.030 ; 5.030 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[0]    ; s_axi_aclk ; 3.957 ; 3.957 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[1]    ; s_axi_aclk ; 5.030 ; 5.030 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[2]    ; s_axi_aclk ; 3.683 ; 3.683 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[3]    ; s_axi_aclk ; 4.079 ; 4.079 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[4]    ; s_axi_aclk ; 4.197 ; 4.197 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[5]    ; s_axi_aclk ; 3.483 ; 3.483 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[6]    ; s_axi_aclk ; 3.914 ; 3.914 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[7]    ; s_axi_aclk ; 3.902 ; 3.902 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[8]    ; s_axi_aclk ; 4.307 ; 4.307 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[9]    ; s_axi_aclk ; 3.652 ; 3.652 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[10]   ; s_axi_aclk ; 3.925 ; 3.925 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[11]   ; s_axi_aclk ; 3.274 ; 3.274 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[12]   ; s_axi_aclk ; 3.623 ; 3.623 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[13]   ; s_axi_aclk ; 2.971 ; 2.971 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[14]   ; s_axi_aclk ; 3.748 ; 3.748 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[15]   ; s_axi_aclk ; 4.196 ; 4.196 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[16]   ; s_axi_aclk ; 4.090 ; 4.090 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[17]   ; s_axi_aclk ; 4.190 ; 4.190 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[18]   ; s_axi_aclk ; 3.547 ; 3.547 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[19]   ; s_axi_aclk ; 4.554 ; 4.554 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[20]   ; s_axi_aclk ; 4.455 ; 4.455 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[21]   ; s_axi_aclk ; 3.552 ; 3.552 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[22]   ; s_axi_aclk ; 3.883 ; 3.883 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[23]   ; s_axi_aclk ; 4.322 ; 4.322 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[24]   ; s_axi_aclk ; 3.141 ; 3.141 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[25]   ; s_axi_aclk ; 4.925 ; 4.925 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[26]   ; s_axi_aclk ; 4.295 ; 4.295 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[27]   ; s_axi_aclk ; 4.089 ; 4.089 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[28]   ; s_axi_aclk ; 3.907 ; 3.907 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[29]   ; s_axi_aclk ; 3.843 ; 3.843 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[30]   ; s_axi_aclk ; 4.163 ; 4.163 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[31]   ; s_axi_aclk ; 3.885 ; 3.885 ; Rise       ; s_axi_aclk      ;
+; s_axi_wvalid       ; s_axi_aclk ; 5.228 ; 5.228 ; Rise       ; s_axi_aclk      ;
++--------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Hold Times                                                                       ;
++--------------------+------------+--------+--------+------------+-----------------+
+; Data Port          ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------------+------------+--------+--------+------------+-----------------+
+; axis_in_data[*]    ; s_axi_aclk ; -1.920 ; -1.920 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[0]   ; s_axi_aclk ; -1.920 ; -1.920 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[1]   ; s_axi_aclk ; -2.268 ; -2.268 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[2]   ; s_axi_aclk ; -2.342 ; -2.342 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[3]   ; s_axi_aclk ; -2.297 ; -2.297 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[4]   ; s_axi_aclk ; -1.978 ; -1.978 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[5]   ; s_axi_aclk ; -2.006 ; -2.006 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[6]   ; s_axi_aclk ; -2.237 ; -2.237 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[7]   ; s_axi_aclk ; -1.974 ; -1.974 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[8]   ; s_axi_aclk ; -2.156 ; -2.156 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[9]   ; s_axi_aclk ; -2.217 ; -2.217 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[10]  ; s_axi_aclk ; -2.313 ; -2.313 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[11]  ; s_axi_aclk ; -2.221 ; -2.221 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[12]  ; s_axi_aclk ; -2.308 ; -2.308 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[13]  ; s_axi_aclk ; -1.970 ; -1.970 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[14]  ; s_axi_aclk ; -2.111 ; -2.111 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[15]  ; s_axi_aclk ; -1.966 ; -1.966 ; Rise       ; s_axi_aclk      ;
+; axis_in_data_valid ; s_axi_aclk ; -2.580 ; -2.580 ; Rise       ; s_axi_aclk      ;
+; s_axi_araddr[*]    ; s_axi_aclk ; -2.199 ; -2.199 ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[2]   ; s_axi_aclk ; -2.652 ; -2.652 ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[3]   ; s_axi_aclk ; -2.199 ; -2.199 ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[4]   ; s_axi_aclk ; -2.322 ; -2.322 ; Rise       ; s_axi_aclk      ;
+; s_axi_aresetn      ; s_axi_aclk ; -2.037 ; -2.037 ; Rise       ; s_axi_aclk      ;
+; s_axi_arvalid      ; s_axi_aclk ; -2.988 ; -2.988 ; Rise       ; s_axi_aclk      ;
+; s_axi_awaddr[*]    ; s_axi_aclk ; -2.202 ; -2.202 ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[2]   ; s_axi_aclk ; -2.832 ; -2.832 ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[3]   ; s_axi_aclk ; -2.777 ; -2.777 ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[4]   ; s_axi_aclk ; -2.202 ; -2.202 ; Rise       ; s_axi_aclk      ;
+; s_axi_awvalid      ; s_axi_aclk ; -2.619 ; -2.619 ; Rise       ; s_axi_aclk      ;
+; s_axi_bready       ; s_axi_aclk ; -2.999 ; -2.999 ; Rise       ; s_axi_aclk      ;
+; s_axi_rready       ; s_axi_aclk ; -2.339 ; -2.339 ; Rise       ; s_axi_aclk      ;
+; s_axi_wdata[*]     ; s_axi_aclk ; -2.254 ; -2.254 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[0]    ; s_axi_aclk ; -3.232 ; -3.232 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[1]    ; s_axi_aclk ; -3.183 ; -3.183 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[2]    ; s_axi_aclk ; -2.254 ; -2.254 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[3]    ; s_axi_aclk ; -2.931 ; -2.931 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[4]    ; s_axi_aclk ; -2.711 ; -2.711 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[5]    ; s_axi_aclk ; -2.743 ; -2.743 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[6]    ; s_axi_aclk ; -3.034 ; -3.034 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[7]    ; s_axi_aclk ; -3.305 ; -3.305 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[8]    ; s_axi_aclk ; -3.431 ; -3.431 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[9]    ; s_axi_aclk ; -2.855 ; -2.855 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[10]   ; s_axi_aclk ; -3.151 ; -3.151 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[11]   ; s_axi_aclk ; -2.667 ; -2.667 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[12]   ; s_axi_aclk ; -3.112 ; -3.112 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[13]   ; s_axi_aclk ; -2.529 ; -2.529 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[14]   ; s_axi_aclk ; -3.007 ; -3.007 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[15]   ; s_axi_aclk ; -3.707 ; -3.707 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[16]   ; s_axi_aclk ; -3.326 ; -3.326 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[17]   ; s_axi_aclk ; -3.143 ; -3.143 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[18]   ; s_axi_aclk ; -2.811 ; -2.811 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[19]   ; s_axi_aclk ; -4.093 ; -4.093 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[20]   ; s_axi_aclk ; -3.490 ; -3.490 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[21]   ; s_axi_aclk ; -3.073 ; -3.073 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[22]   ; s_axi_aclk ; -3.456 ; -3.456 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[23]   ; s_axi_aclk ; -3.827 ; -3.827 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[24]   ; s_axi_aclk ; -2.664 ; -2.664 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[25]   ; s_axi_aclk ; -4.253 ; -4.253 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[26]   ; s_axi_aclk ; -3.312 ; -3.312 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[27]   ; s_axi_aclk ; -3.730 ; -3.730 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[28]   ; s_axi_aclk ; -3.490 ; -3.490 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[29]   ; s_axi_aclk ; -2.789 ; -2.789 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[30]   ; s_axi_aclk ; -3.684 ; -3.684 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[31]   ; s_axi_aclk ; -3.670 ; -3.670 ; Rise       ; s_axi_aclk      ;
+; s_axi_wvalid       ; s_axi_aclk ; -2.745 ; -2.745 ; Rise       ; s_axi_aclk      ;
++--------------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; intr             ; s_axi_aclk ; 4.688 ; 4.688 ; Rise       ; s_axi_aclk      ;
+; s_axi_arready    ; s_axi_aclk ; 4.861 ; 4.861 ; Rise       ; s_axi_aclk      ;
+; s_axi_awready    ; s_axi_aclk ; 5.114 ; 5.114 ; Rise       ; s_axi_aclk      ;
+; s_axi_bvalid     ; s_axi_aclk ; 5.024 ; 5.024 ; Rise       ; s_axi_aclk      ;
+; s_axi_rdata[*]   ; s_axi_aclk ; 6.224 ; 6.224 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[0]  ; s_axi_aclk ; 5.144 ; 5.144 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[1]  ; s_axi_aclk ; 4.570 ; 4.570 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[2]  ; s_axi_aclk ; 5.283 ; 5.283 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[3]  ; s_axi_aclk ; 4.320 ; 4.320 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[4]  ; s_axi_aclk ; 4.757 ; 4.757 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[5]  ; s_axi_aclk ; 5.842 ; 5.842 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[6]  ; s_axi_aclk ; 4.434 ; 4.434 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[7]  ; s_axi_aclk ; 4.501 ; 4.501 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[8]  ; s_axi_aclk ; 5.429 ; 5.429 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[9]  ; s_axi_aclk ; 5.549 ; 5.549 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[10] ; s_axi_aclk ; 4.381 ; 4.381 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[11] ; s_axi_aclk ; 5.358 ; 5.358 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[12] ; s_axi_aclk ; 5.546 ; 5.546 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[13] ; s_axi_aclk ; 5.130 ; 5.130 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[14] ; s_axi_aclk ; 4.797 ; 4.797 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[15] ; s_axi_aclk ; 5.762 ; 5.762 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[16] ; s_axi_aclk ; 6.224 ; 6.224 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[17] ; s_axi_aclk ; 5.328 ; 5.328 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[18] ; s_axi_aclk ; 4.348 ; 4.348 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[19] ; s_axi_aclk ; 5.533 ; 5.533 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[20] ; s_axi_aclk ; 4.584 ; 4.584 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[21] ; s_axi_aclk ; 5.877 ; 5.877 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[22] ; s_axi_aclk ; 5.073 ; 5.073 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[23] ; s_axi_aclk ; 5.748 ; 5.748 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[24] ; s_axi_aclk ; 5.731 ; 5.731 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[25] ; s_axi_aclk ; 6.187 ; 6.187 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[26] ; s_axi_aclk ; 5.564 ; 5.564 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[27] ; s_axi_aclk ; 5.473 ; 5.473 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[28] ; s_axi_aclk ; 6.194 ; 6.194 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[29] ; s_axi_aclk ; 4.458 ; 4.458 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[30] ; s_axi_aclk ; 4.661 ; 4.661 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[31] ; s_axi_aclk ; 6.192 ; 6.192 ; Rise       ; s_axi_aclk      ;
+; s_axi_rvalid     ; s_axi_aclk ; 5.543 ; 5.543 ; Rise       ; s_axi_aclk      ;
+; s_axi_wready     ; s_axi_aclk ; 5.144 ; 5.144 ; Rise       ; s_axi_aclk      ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; intr             ; s_axi_aclk ; 4.688 ; 4.688 ; Rise       ; s_axi_aclk      ;
+; s_axi_arready    ; s_axi_aclk ; 4.861 ; 4.861 ; Rise       ; s_axi_aclk      ;
+; s_axi_awready    ; s_axi_aclk ; 5.114 ; 5.114 ; Rise       ; s_axi_aclk      ;
+; s_axi_bvalid     ; s_axi_aclk ; 5.024 ; 5.024 ; Rise       ; s_axi_aclk      ;
+; s_axi_rdata[*]   ; s_axi_aclk ; 4.320 ; 4.320 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[0]  ; s_axi_aclk ; 5.144 ; 5.144 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[1]  ; s_axi_aclk ; 4.570 ; 4.570 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[2]  ; s_axi_aclk ; 5.283 ; 5.283 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[3]  ; s_axi_aclk ; 4.320 ; 4.320 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[4]  ; s_axi_aclk ; 4.757 ; 4.757 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[5]  ; s_axi_aclk ; 5.842 ; 5.842 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[6]  ; s_axi_aclk ; 4.434 ; 4.434 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[7]  ; s_axi_aclk ; 4.501 ; 4.501 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[8]  ; s_axi_aclk ; 5.429 ; 5.429 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[9]  ; s_axi_aclk ; 5.549 ; 5.549 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[10] ; s_axi_aclk ; 4.381 ; 4.381 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[11] ; s_axi_aclk ; 5.358 ; 5.358 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[12] ; s_axi_aclk ; 5.546 ; 5.546 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[13] ; s_axi_aclk ; 5.130 ; 5.130 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[14] ; s_axi_aclk ; 4.797 ; 4.797 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[15] ; s_axi_aclk ; 5.762 ; 5.762 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[16] ; s_axi_aclk ; 6.224 ; 6.224 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[17] ; s_axi_aclk ; 5.328 ; 5.328 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[18] ; s_axi_aclk ; 4.348 ; 4.348 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[19] ; s_axi_aclk ; 5.533 ; 5.533 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[20] ; s_axi_aclk ; 4.584 ; 4.584 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[21] ; s_axi_aclk ; 5.877 ; 5.877 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[22] ; s_axi_aclk ; 5.073 ; 5.073 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[23] ; s_axi_aclk ; 5.748 ; 5.748 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[24] ; s_axi_aclk ; 5.731 ; 5.731 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[25] ; s_axi_aclk ; 6.187 ; 6.187 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[26] ; s_axi_aclk ; 5.564 ; 5.564 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[27] ; s_axi_aclk ; 5.473 ; 5.473 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[28] ; s_axi_aclk ; 6.194 ; 6.194 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[29] ; s_axi_aclk ; 4.458 ; 4.458 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[30] ; s_axi_aclk ; 4.661 ; 4.661 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[31] ; s_axi_aclk ; 6.192 ; 6.192 ; Rise       ; s_axi_aclk      ;
+; s_axi_rvalid     ; s_axi_aclk ; 5.543 ; 5.543 ; Rise       ; s_axi_aclk      ;
+; s_axi_wready     ; s_axi_aclk ; 5.144 ; 5.144 ; Rise       ; s_axi_aclk      ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                              ;
++------------------+------------+-------+----------+---------+---------------------+
+; Clock            ; Setup      ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+------------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -11.268    ; 0.215 ; N/A      ; N/A     ; -1.519              ;
+;  s_axi_aclk      ; -11.268    ; 0.215 ; N/A      ; N/A     ; -1.519              ;
+; Design-wide TNS  ; -69221.352 ; 0.0   ; 0.0      ; 0.0     ; -15492.5            ;
+;  s_axi_aclk      ; -69221.352 ; 0.000 ; N/A      ; N/A     ; -15492.500          ;
++------------------+------------+-------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------+
+; Setup Times                                                                      ;
++--------------------+------------+--------+--------+------------+-----------------+
+; Data Port          ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------------+------------+--------+--------+------------+-----------------+
+; axis_in_data[*]    ; s_axi_aclk ; 7.356  ; 7.356  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[0]   ; s_axi_aclk ; 5.694  ; 5.694  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[1]   ; s_axi_aclk ; 5.718  ; 5.718  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[2]   ; s_axi_aclk ; 7.038  ; 7.038  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[3]   ; s_axi_aclk ; 5.955  ; 5.955  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[4]   ; s_axi_aclk ; 5.381  ; 5.381  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[5]   ; s_axi_aclk ; 5.919  ; 5.919  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[6]   ; s_axi_aclk ; 6.699  ; 6.699  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[7]   ; s_axi_aclk ; 6.827  ; 6.827  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[8]   ; s_axi_aclk ; 5.581  ; 5.581  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[9]   ; s_axi_aclk ; 5.808  ; 5.808  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[10]  ; s_axi_aclk ; 7.356  ; 7.356  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[11]  ; s_axi_aclk ; 5.975  ; 5.975  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[12]  ; s_axi_aclk ; 6.310  ; 6.310  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[13]  ; s_axi_aclk ; 7.049  ; 7.049  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[14]  ; s_axi_aclk ; 6.391  ; 6.391  ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[15]  ; s_axi_aclk ; 6.378  ; 6.378  ; Rise       ; s_axi_aclk      ;
+; axis_in_data_valid ; s_axi_aclk ; 7.206  ; 7.206  ; Rise       ; s_axi_aclk      ;
+; s_axi_araddr[*]    ; s_axi_aclk ; 5.176  ; 5.176  ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[2]   ; s_axi_aclk ; 5.176  ; 5.176  ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[3]   ; s_axi_aclk ; 4.316  ; 4.316  ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[4]   ; s_axi_aclk ; 4.510  ; 4.510  ; Rise       ; s_axi_aclk      ;
+; s_axi_aresetn      ; s_axi_aclk ; 12.736 ; 12.736 ; Rise       ; s_axi_aclk      ;
+; s_axi_arvalid      ; s_axi_aclk ; 8.958  ; 8.958  ; Rise       ; s_axi_aclk      ;
+; s_axi_awaddr[*]    ; s_axi_aclk ; 5.478  ; 5.478  ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[2]   ; s_axi_aclk ; 5.478  ; 5.478  ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[3]   ; s_axi_aclk ; 5.422  ; 5.422  ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[4]   ; s_axi_aclk ; 4.411  ; 4.411  ; Rise       ; s_axi_aclk      ;
+; s_axi_awvalid      ; s_axi_aclk ; 9.958  ; 9.958  ; Rise       ; s_axi_aclk      ;
+; s_axi_bready       ; s_axi_aclk ; 6.255  ; 6.255  ; Rise       ; s_axi_aclk      ;
+; s_axi_rready       ; s_axi_aclk ; 6.269  ; 6.269  ; Rise       ; s_axi_aclk      ;
+; s_axi_wdata[*]     ; s_axi_aclk ; 9.733  ; 9.733  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[0]    ; s_axi_aclk ; 7.602  ; 7.602  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[1]    ; s_axi_aclk ; 9.733  ; 9.733  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[2]    ; s_axi_aclk ; 7.247  ; 7.247  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[3]    ; s_axi_aclk ; 8.011  ; 8.011  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[4]    ; s_axi_aclk ; 8.176  ; 8.176  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[5]    ; s_axi_aclk ; 6.704  ; 6.704  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[6]    ; s_axi_aclk ; 7.585  ; 7.585  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[7]    ; s_axi_aclk ; 7.524  ; 7.524  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[8]    ; s_axi_aclk ; 8.395  ; 8.395  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[9]    ; s_axi_aclk ; 7.110  ; 7.110  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[10]   ; s_axi_aclk ; 7.547  ; 7.547  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[11]   ; s_axi_aclk ; 6.395  ; 6.395  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[12]   ; s_axi_aclk ; 6.867  ; 6.867  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[13]   ; s_axi_aclk ; 5.725  ; 5.725  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[14]   ; s_axi_aclk ; 7.213  ; 7.213  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[15]   ; s_axi_aclk ; 8.164  ; 8.164  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[16]   ; s_axi_aclk ; 7.900  ; 7.900  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[17]   ; s_axi_aclk ; 8.133  ; 8.133  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[18]   ; s_axi_aclk ; 7.007  ; 7.007  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[19]   ; s_axi_aclk ; 8.813  ; 8.813  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[20]   ; s_axi_aclk ; 8.705  ; 8.705  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[21]   ; s_axi_aclk ; 6.758  ; 6.758  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[22]   ; s_axi_aclk ; 7.478  ; 7.478  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[23]   ; s_axi_aclk ; 8.413  ; 8.413  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[24]   ; s_axi_aclk ; 6.013  ; 6.013  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[25]   ; s_axi_aclk ; 9.538  ; 9.538  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[26]   ; s_axi_aclk ; 8.405  ; 8.405  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[27]   ; s_axi_aclk ; 7.896  ; 7.896  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[28]   ; s_axi_aclk ; 7.580  ; 7.580  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[29]   ; s_axi_aclk ; 7.158  ; 7.158  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[30]   ; s_axi_aclk ; 8.166  ; 8.166  ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[31]   ; s_axi_aclk ; 7.414  ; 7.414  ; Rise       ; s_axi_aclk      ;
+; s_axi_wvalid       ; s_axi_aclk ; 10.241 ; 10.241 ; Rise       ; s_axi_aclk      ;
++--------------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Hold Times                                                                       ;
++--------------------+------------+--------+--------+------------+-----------------+
+; Data Port          ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------------+------------+--------+--------+------------+-----------------+
+; axis_in_data[*]    ; s_axi_aclk ; -1.920 ; -1.920 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[0]   ; s_axi_aclk ; -1.920 ; -1.920 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[1]   ; s_axi_aclk ; -2.268 ; -2.268 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[2]   ; s_axi_aclk ; -2.342 ; -2.342 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[3]   ; s_axi_aclk ; -2.297 ; -2.297 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[4]   ; s_axi_aclk ; -1.978 ; -1.978 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[5]   ; s_axi_aclk ; -2.006 ; -2.006 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[6]   ; s_axi_aclk ; -2.237 ; -2.237 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[7]   ; s_axi_aclk ; -1.974 ; -1.974 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[8]   ; s_axi_aclk ; -2.156 ; -2.156 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[9]   ; s_axi_aclk ; -2.217 ; -2.217 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[10]  ; s_axi_aclk ; -2.313 ; -2.313 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[11]  ; s_axi_aclk ; -2.221 ; -2.221 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[12]  ; s_axi_aclk ; -2.308 ; -2.308 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[13]  ; s_axi_aclk ; -1.970 ; -1.970 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[14]  ; s_axi_aclk ; -2.111 ; -2.111 ; Rise       ; s_axi_aclk      ;
+;  axis_in_data[15]  ; s_axi_aclk ; -1.966 ; -1.966 ; Rise       ; s_axi_aclk      ;
+; axis_in_data_valid ; s_axi_aclk ; -2.580 ; -2.580 ; Rise       ; s_axi_aclk      ;
+; s_axi_araddr[*]    ; s_axi_aclk ; -2.199 ; -2.199 ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[2]   ; s_axi_aclk ; -2.652 ; -2.652 ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[3]   ; s_axi_aclk ; -2.199 ; -2.199 ; Rise       ; s_axi_aclk      ;
+;  s_axi_araddr[4]   ; s_axi_aclk ; -2.322 ; -2.322 ; Rise       ; s_axi_aclk      ;
+; s_axi_aresetn      ; s_axi_aclk ; -2.037 ; -2.037 ; Rise       ; s_axi_aclk      ;
+; s_axi_arvalid      ; s_axi_aclk ; -2.988 ; -2.988 ; Rise       ; s_axi_aclk      ;
+; s_axi_awaddr[*]    ; s_axi_aclk ; -2.202 ; -2.202 ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[2]   ; s_axi_aclk ; -2.832 ; -2.832 ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[3]   ; s_axi_aclk ; -2.777 ; -2.777 ; Rise       ; s_axi_aclk      ;
+;  s_axi_awaddr[4]   ; s_axi_aclk ; -2.202 ; -2.202 ; Rise       ; s_axi_aclk      ;
+; s_axi_awvalid      ; s_axi_aclk ; -2.619 ; -2.619 ; Rise       ; s_axi_aclk      ;
+; s_axi_bready       ; s_axi_aclk ; -2.999 ; -2.999 ; Rise       ; s_axi_aclk      ;
+; s_axi_rready       ; s_axi_aclk ; -2.339 ; -2.339 ; Rise       ; s_axi_aclk      ;
+; s_axi_wdata[*]     ; s_axi_aclk ; -2.254 ; -2.254 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[0]    ; s_axi_aclk ; -3.232 ; -3.232 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[1]    ; s_axi_aclk ; -3.183 ; -3.183 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[2]    ; s_axi_aclk ; -2.254 ; -2.254 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[3]    ; s_axi_aclk ; -2.931 ; -2.931 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[4]    ; s_axi_aclk ; -2.711 ; -2.711 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[5]    ; s_axi_aclk ; -2.743 ; -2.743 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[6]    ; s_axi_aclk ; -3.034 ; -3.034 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[7]    ; s_axi_aclk ; -3.305 ; -3.305 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[8]    ; s_axi_aclk ; -3.431 ; -3.431 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[9]    ; s_axi_aclk ; -2.855 ; -2.855 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[10]   ; s_axi_aclk ; -3.151 ; -3.151 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[11]   ; s_axi_aclk ; -2.667 ; -2.667 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[12]   ; s_axi_aclk ; -3.112 ; -3.112 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[13]   ; s_axi_aclk ; -2.529 ; -2.529 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[14]   ; s_axi_aclk ; -3.007 ; -3.007 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[15]   ; s_axi_aclk ; -3.707 ; -3.707 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[16]   ; s_axi_aclk ; -3.326 ; -3.326 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[17]   ; s_axi_aclk ; -3.143 ; -3.143 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[18]   ; s_axi_aclk ; -2.811 ; -2.811 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[19]   ; s_axi_aclk ; -4.093 ; -4.093 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[20]   ; s_axi_aclk ; -3.490 ; -3.490 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[21]   ; s_axi_aclk ; -3.073 ; -3.073 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[22]   ; s_axi_aclk ; -3.456 ; -3.456 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[23]   ; s_axi_aclk ; -3.827 ; -3.827 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[24]   ; s_axi_aclk ; -2.664 ; -2.664 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[25]   ; s_axi_aclk ; -4.253 ; -4.253 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[26]   ; s_axi_aclk ; -3.312 ; -3.312 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[27]   ; s_axi_aclk ; -3.730 ; -3.730 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[28]   ; s_axi_aclk ; -3.490 ; -3.490 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[29]   ; s_axi_aclk ; -2.789 ; -2.789 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[30]   ; s_axi_aclk ; -3.684 ; -3.684 ; Rise       ; s_axi_aclk      ;
+;  s_axi_wdata[31]   ; s_axi_aclk ; -3.670 ; -3.670 ; Rise       ; s_axi_aclk      ;
+; s_axi_wvalid       ; s_axi_aclk ; -2.745 ; -2.745 ; Rise       ; s_axi_aclk      ;
++--------------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Clock to Output Times                                                          ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; intr             ; s_axi_aclk ; 8.496  ; 8.496  ; Rise       ; s_axi_aclk      ;
+; s_axi_arready    ; s_axi_aclk ; 8.963  ; 8.963  ; Rise       ; s_axi_aclk      ;
+; s_axi_awready    ; s_axi_aclk ; 9.474  ; 9.474  ; Rise       ; s_axi_aclk      ;
+; s_axi_bvalid     ; s_axi_aclk ; 9.282  ; 9.282  ; Rise       ; s_axi_aclk      ;
+; s_axi_rdata[*]   ; s_axi_aclk ; 11.830 ; 11.830 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[0]  ; s_axi_aclk ; 9.373  ; 9.373  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[1]  ; s_axi_aclk ; 8.304  ; 8.304  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[2]  ; s_axi_aclk ; 9.610  ; 9.610  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[3]  ; s_axi_aclk ; 7.651  ; 7.651  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[4]  ; s_axi_aclk ; 8.800  ; 8.800  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[5]  ; s_axi_aclk ; 11.033 ; 11.033 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[6]  ; s_axi_aclk ; 7.955  ; 7.955  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[7]  ; s_axi_aclk ; 8.160  ; 8.160  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[8]  ; s_axi_aclk ; 10.039 ; 10.039 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[9]  ; s_axi_aclk ; 10.181 ; 10.181 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[10] ; s_axi_aclk ; 7.867  ; 7.867  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[11] ; s_axi_aclk ; 9.739  ; 9.739  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[12] ; s_axi_aclk ; 10.158 ; 10.158 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[13] ; s_axi_aclk ; 9.250  ; 9.250  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[14] ; s_axi_aclk ; 8.713  ; 8.713  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[15] ; s_axi_aclk ; 10.696 ; 10.696 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[16] ; s_axi_aclk ; 11.830 ; 11.830 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[17] ; s_axi_aclk ; 9.837  ; 9.837  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[18] ; s_axi_aclk ; 7.811  ; 7.811  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[19] ; s_axi_aclk ; 10.286 ; 10.286 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[20] ; s_axi_aclk ; 8.259  ; 8.259  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[21] ; s_axi_aclk ; 11.127 ; 11.127 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[22] ; s_axi_aclk ; 9.173  ; 9.173  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[23] ; s_axi_aclk ; 10.674 ; 10.674 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[24] ; s_axi_aclk ; 10.751 ; 10.751 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[25] ; s_axi_aclk ; 11.683 ; 11.683 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[26] ; s_axi_aclk ; 10.414 ; 10.414 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[27] ; s_axi_aclk ; 10.171 ; 10.171 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[28] ; s_axi_aclk ; 11.340 ; 11.340 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[29] ; s_axi_aclk ; 8.016  ; 8.016  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[30] ; s_axi_aclk ; 8.521  ; 8.521  ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[31] ; s_axi_aclk ; 11.693 ; 11.693 ; Rise       ; s_axi_aclk      ;
+; s_axi_rvalid     ; s_axi_aclk ; 10.345 ; 10.345 ; Rise       ; s_axi_aclk      ;
+; s_axi_wready     ; s_axi_aclk ; 9.504  ; 9.504  ; Rise       ; s_axi_aclk      ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; intr             ; s_axi_aclk ; 4.688 ; 4.688 ; Rise       ; s_axi_aclk      ;
+; s_axi_arready    ; s_axi_aclk ; 4.861 ; 4.861 ; Rise       ; s_axi_aclk      ;
+; s_axi_awready    ; s_axi_aclk ; 5.114 ; 5.114 ; Rise       ; s_axi_aclk      ;
+; s_axi_bvalid     ; s_axi_aclk ; 5.024 ; 5.024 ; Rise       ; s_axi_aclk      ;
+; s_axi_rdata[*]   ; s_axi_aclk ; 4.320 ; 4.320 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[0]  ; s_axi_aclk ; 5.144 ; 5.144 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[1]  ; s_axi_aclk ; 4.570 ; 4.570 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[2]  ; s_axi_aclk ; 5.283 ; 5.283 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[3]  ; s_axi_aclk ; 4.320 ; 4.320 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[4]  ; s_axi_aclk ; 4.757 ; 4.757 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[5]  ; s_axi_aclk ; 5.842 ; 5.842 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[6]  ; s_axi_aclk ; 4.434 ; 4.434 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[7]  ; s_axi_aclk ; 4.501 ; 4.501 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[8]  ; s_axi_aclk ; 5.429 ; 5.429 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[9]  ; s_axi_aclk ; 5.549 ; 5.549 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[10] ; s_axi_aclk ; 4.381 ; 4.381 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[11] ; s_axi_aclk ; 5.358 ; 5.358 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[12] ; s_axi_aclk ; 5.546 ; 5.546 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[13] ; s_axi_aclk ; 5.130 ; 5.130 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[14] ; s_axi_aclk ; 4.797 ; 4.797 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[15] ; s_axi_aclk ; 5.762 ; 5.762 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[16] ; s_axi_aclk ; 6.224 ; 6.224 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[17] ; s_axi_aclk ; 5.328 ; 5.328 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[18] ; s_axi_aclk ; 4.348 ; 4.348 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[19] ; s_axi_aclk ; 5.533 ; 5.533 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[20] ; s_axi_aclk ; 4.584 ; 4.584 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[21] ; s_axi_aclk ; 5.877 ; 5.877 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[22] ; s_axi_aclk ; 5.073 ; 5.073 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[23] ; s_axi_aclk ; 5.748 ; 5.748 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[24] ; s_axi_aclk ; 5.731 ; 5.731 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[25] ; s_axi_aclk ; 6.187 ; 6.187 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[26] ; s_axi_aclk ; 5.564 ; 5.564 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[27] ; s_axi_aclk ; 5.473 ; 5.473 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[28] ; s_axi_aclk ; 6.194 ; 6.194 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[29] ; s_axi_aclk ; 4.458 ; 4.458 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[30] ; s_axi_aclk ; 4.661 ; 4.661 ; Rise       ; s_axi_aclk      ;
+;  s_axi_rdata[31] ; s_axi_aclk ; 6.192 ; 6.192 ; Rise       ; s_axi_aclk      ;
+; s_axi_rvalid     ; s_axi_aclk ; 5.543 ; 5.543 ; Rise       ; s_axi_aclk      ;
+; s_axi_wready     ; s_axi_aclk ; 5.144 ; 5.144 ; Rise       ; s_axi_aclk      ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------+
+; Setup Transfers                                                      ;
++------------+------------+-----------+----------+----------+----------+
+; From Clock ; To Clock   ; RR Paths  ; FR Paths ; RF Paths ; FF Paths ;
++------------+------------+-----------+----------+----------+----------+
+; s_axi_aclk ; s_axi_aclk ; 127627329 ; 0        ; 0        ; 0        ;
++------------+------------+-----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++----------------------------------------------------------------------+
+; Hold Transfers                                                       ;
++------------+------------+-----------+----------+----------+----------+
+; From Clock ; To Clock   ; RR Paths  ; FR Paths ; RF Paths ; FF Paths ;
++------------+------------+-----------+----------+----------+----------+
+; s_axi_aclk ; s_axi_aclk ; 127627329 ; 0        ; 0        ; 0        ;
++------------+------------+-----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 61    ; 61   ;
+; Unconstrained Input Port Paths  ; 5198  ; 5198 ;
+; Unconstrained Output Ports      ; 38    ; 38   ;
+; Unconstrained Output Port Paths ; 38    ; 38   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Oct 02 21:04:34 2024
+Info: Command: quartus_sta mlp_to_fpga -c cyNet
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'cyNet.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name s_axi_aclk s_axi_aclk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -11.268
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -11.268    -69221.352 s_axi_aclk 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 s_axi_aclk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.423
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.423    -15174.932 s_axi_aclk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.197
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -5.197    -27174.342 s_axi_aclk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 s_axi_aclk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.519
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.519    -15492.500 s_axi_aclk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4960 megabytes
+    Info: Processing ended: Wed Oct 02 21:04:43 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:09
+
+

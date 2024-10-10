@@ -1,0 +1,25 @@
+-- begin_signature
+-- neuron(layerNo
+-- 2
+-- neuronNo
+-- 2
+-- numWeight
+-- 16
+-- dataWidth
+-- 16
+-- weightIntWidth
+-- 4
+-- biasFile
+-- "C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/b_2_2.mif"
+-- weightFile
+-- "C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/w_2_2.mif")
+-- end_signature
+WIDTH=32;
+DEPTH=1;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	0 :	00000000000000001111111111010111;
+END;

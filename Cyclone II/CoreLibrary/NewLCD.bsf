@@ -1,0 +1,309 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 272 624)
+	(text "NewLCD" (rect 5 0 55 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 592 25 604)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Reset~" (rect 0 0 40 14)(font "Arial" (font_size 8)))
+		(text "Reset~" (rect 21 27 61 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "CLK_50MHz" (rect 0 0 69 14)(font "Arial" (font_size 8)))
+		(text "CLK_50MHz" (rect 21 43 90 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "HEX0[3..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "HEX0[3..0]" (rect 21 59 80 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "HEX1[3..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "HEX1[3..0]" (rect 21 75 80 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "HEX2[3..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "HEX2[3..0]" (rect 21 91 80 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "HEX3[3..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "HEX3[3..0]" (rect 21 107 80 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "HEX4[3..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "HEX4[3..0]" (rect 21 123 80 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "HEX5[3..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "HEX5[3..0]" (rect 21 139 80 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "HEX6[3..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "HEX6[3..0]" (rect 21 155 80 169)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "HEX7[3..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "HEX7[3..0]" (rect 21 171 80 185)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "HEX8[3..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "HEX8[3..0]" (rect 21 187 80 201)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 16 192)(line_width 3))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "HEX9[3..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "HEX9[3..0]" (rect 21 203 80 217)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 16 208)(line_width 3))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "HEX10[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX10[3..0]" (rect 21 219 87 233)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 16 224)(line_width 3))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "HEX11[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX11[3..0]" (rect 21 235 87 249)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 16 240)(line_width 3))
+	)
+	(port
+		(pt 0 256)
+		(input)
+		(text "HEX12[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX12[3..0]" (rect 21 251 87 265)(font "Arial" (font_size 8)))
+		(line (pt 0 256)(pt 16 256)(line_width 3))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "HEX13[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX13[3..0]" (rect 21 267 87 281)(font "Arial" (font_size 8)))
+		(line (pt 0 272)(pt 16 272)(line_width 3))
+	)
+	(port
+		(pt 0 288)
+		(input)
+		(text "HEX14[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX14[3..0]" (rect 21 283 87 297)(font "Arial" (font_size 8)))
+		(line (pt 0 288)(pt 16 288)(line_width 3))
+	)
+	(port
+		(pt 0 304)
+		(input)
+		(text "HEX15[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX15[3..0]" (rect 21 299 87 313)(font "Arial" (font_size 8)))
+		(line (pt 0 304)(pt 16 304)(line_width 3))
+	)
+	(port
+		(pt 0 320)
+		(input)
+		(text "HEX16[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX16[3..0]" (rect 21 315 87 329)(font "Arial" (font_size 8)))
+		(line (pt 0 320)(pt 16 320)(line_width 3))
+	)
+	(port
+		(pt 0 336)
+		(input)
+		(text "HEX17[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX17[3..0]" (rect 21 331 87 345)(font "Arial" (font_size 8)))
+		(line (pt 0 336)(pt 16 336)(line_width 3))
+	)
+	(port
+		(pt 0 352)
+		(input)
+		(text "HEX18[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX18[3..0]" (rect 21 347 87 361)(font "Arial" (font_size 8)))
+		(line (pt 0 352)(pt 16 352)(line_width 3))
+	)
+	(port
+		(pt 0 368)
+		(input)
+		(text "HEX19[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX19[3..0]" (rect 21 363 87 377)(font "Arial" (font_size 8)))
+		(line (pt 0 368)(pt 16 368)(line_width 3))
+	)
+	(port
+		(pt 0 384)
+		(input)
+		(text "HEX20[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX20[3..0]" (rect 21 379 87 393)(font "Arial" (font_size 8)))
+		(line (pt 0 384)(pt 16 384)(line_width 3))
+	)
+	(port
+		(pt 0 400)
+		(input)
+		(text "HEX21[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX21[3..0]" (rect 21 395 87 409)(font "Arial" (font_size 8)))
+		(line (pt 0 400)(pt 16 400)(line_width 3))
+	)
+	(port
+		(pt 0 416)
+		(input)
+		(text "HEX22[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX22[3..0]" (rect 21 411 87 425)(font "Arial" (font_size 8)))
+		(line (pt 0 416)(pt 16 416)(line_width 3))
+	)
+	(port
+		(pt 0 432)
+		(input)
+		(text "HEX23[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX23[3..0]" (rect 21 427 87 441)(font "Arial" (font_size 8)))
+		(line (pt 0 432)(pt 16 432)(line_width 3))
+	)
+	(port
+		(pt 0 448)
+		(input)
+		(text "HEX24[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX24[3..0]" (rect 21 443 87 457)(font "Arial" (font_size 8)))
+		(line (pt 0 448)(pt 16 448)(line_width 3))
+	)
+	(port
+		(pt 0 464)
+		(input)
+		(text "HEX25[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX25[3..0]" (rect 21 459 87 473)(font "Arial" (font_size 8)))
+		(line (pt 0 464)(pt 16 464)(line_width 3))
+	)
+	(port
+		(pt 0 480)
+		(input)
+		(text "HEX26[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX26[3..0]" (rect 21 475 87 489)(font "Arial" (font_size 8)))
+		(line (pt 0 480)(pt 16 480)(line_width 3))
+	)
+	(port
+		(pt 0 496)
+		(input)
+		(text "HEX27[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX27[3..0]" (rect 21 491 87 505)(font "Arial" (font_size 8)))
+		(line (pt 0 496)(pt 16 496)(line_width 3))
+	)
+	(port
+		(pt 0 512)
+		(input)
+		(text "HEX28[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX28[3..0]" (rect 21 507 87 521)(font "Arial" (font_size 8)))
+		(line (pt 0 512)(pt 16 512)(line_width 3))
+	)
+	(port
+		(pt 0 528)
+		(input)
+		(text "HEX29[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX29[3..0]" (rect 21 523 87 537)(font "Arial" (font_size 8)))
+		(line (pt 0 528)(pt 16 528)(line_width 3))
+	)
+	(port
+		(pt 0 544)
+		(input)
+		(text "HEX30[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX30[3..0]" (rect 21 539 87 553)(font "Arial" (font_size 8)))
+		(line (pt 0 544)(pt 16 544)(line_width 3))
+	)
+	(port
+		(pt 0 560)
+		(input)
+		(text "HEX31[3..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "HEX31[3..0]" (rect 21 555 87 569)(font "Arial" (font_size 8)))
+		(line (pt 0 560)(pt 16 560)(line_width 3))
+	)
+	(port
+		(pt 256 32)
+		(output)
+		(text "LCD_RS" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "LCD_RS" (rect 188 27 235 41)(font "Arial" (font_size 8)))
+		(line (pt 256 32)(pt 240 32)(line_width 1))
+	)
+	(port
+		(pt 256 48)
+		(output)
+		(text "LCD_E" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "LCD_E" (rect 198 43 235 57)(font "Arial" (font_size 8)))
+		(line (pt 256 48)(pt 240 48)(line_width 1))
+	)
+	(port
+		(pt 256 64)
+		(output)
+		(text "LCD_RW" (rect 0 0 50 14)(font "Arial" (font_size 8)))
+		(text "LCD_RW" (rect 185 59 235 73)(font "Arial" (font_size 8)))
+		(line (pt 256 64)(pt 240 64)(line_width 1))
+	)
+	(port
+		(pt 256 80)
+		(output)
+		(text "LCD_STATUS_OUT" (rect 0 0 110 14)(font "Arial" (font_size 8)))
+		(text "LCD_STATUS_OUT" (rect 125 75 235 89)(font "Arial" (font_size 8)))
+		(line (pt 256 80)(pt 240 80)(line_width 1))
+	)
+	(port
+		(pt 256 96)
+		(output)
+		(text "LCD_BL_STATUS_OUT" (rect 0 0 133 14)(font "Arial" (font_size 8)))
+		(text "LCD_BL_STATUS_OUT" (rect 102 91 235 105)(font "Arial" (font_size 8)))
+		(line (pt 256 96)(pt 240 96)(line_width 1))
+	)
+	(port
+		(pt 256 112)
+		(bidir)
+		(text "DATA_BUS[7..0]" (rect 0 0 94 14)(font "Arial" (font_size 8)))
+		(text "DATA_BUS[7..0]" (rect 141 107 235 121)(font "Arial" (font_size 8)))
+		(line (pt 256 112)(pt 240 112)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 240 592)(line_width 1))
+	)
+)

@@ -1,0 +1,32 @@
+-- begin_signature
+-- Weight_Memory(numWeight
+-- 10
+-- neuronNo
+-- 9
+-- layerNo
+-- 3
+-- addressWidth
+-- 4
+-- dataWidth
+-- 16
+-- weightFile
+-- "C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/w_3_9.mif")
+-- end_signature
+WIDTH=16;
+DEPTH=10;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	9 :	1111100100011100;
+	8 :	1111110000010111;
+	7 :	1111101101111001;
+	6 :	0000010001001111;
+	5 :	0000111111001011;
+	4 :	0000000011011100;
+	3 :	1111111011100001;
+	2 :	1111101011010101;
+	1 :	1111101101001011;
+	0 :	1111111101101101;
+END;

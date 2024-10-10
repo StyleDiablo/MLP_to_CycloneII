@@ -1,0 +1,69 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do cyMlp_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Thesis/rtl {C:/Thesis/rtl/maxFinder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module maxFinder
+# 
+# Top level modules:
+# 	maxFinder
+# vlog -vlog01compat -work work +incdir+C:/Thesis/rtl {C:/Thesis/rtl/Layer_3.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Layer_3
+# 
+# Top level modules:
+# 	Layer_3
+# vlog -vlog01compat -work work +incdir+C:/Thesis/rtl {C:/Thesis/rtl/Layer_2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Layer_2
+# 
+# Top level modules:
+# 	Layer_2
+# vlog -vlog01compat -work work +incdir+C:/Thesis/rtl {C:/Thesis/rtl/Layer_1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Layer_1
+# 
+# Top level modules:
+# 	Layer_1
+# vlog -vlog01compat -work work +incdir+C:/Thesis/rtl {C:/Thesis/rtl/input_ROM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module input_ROM
+# 
+# Top level modules:
+# 	input_ROM
+# vlog -vlog01compat -work work +incdir+C:/Thesis/rtl {C:/Thesis/rtl/include.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# vlog -vlog01compat -work work +incdir+C:/Thesis/rtl {C:/Thesis/rtl/Weight_Memory.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Weight_Memory
+# 
+# Top level modules:
+# 	Weight_Memory
+# vlog -vlog01compat -work work +incdir+C:/Thesis/rtl {C:/Thesis/rtl/Sig_ROM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Sig_ROM
+# 
+# Top level modules:
+# 	Sig_ROM
+# vlog -vlog01compat -work work +incdir+C:/Thesis/rtl {C:/Thesis/rtl/neuron.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module neuron
+# 
+# Top level modules:
+# 	neuron
+# vlog -vlog01compat -work work +incdir+C:/Thesis/rtl {C:/Thesis/rtl/cyMlp.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cyMlp
+# 
+# Top level modules:
+# 	cyMlp
+# 

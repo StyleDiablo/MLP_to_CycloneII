@@ -1,0 +1,25 @@
+-- begin_signature
+-- neuron(layerNo
+-- 3
+-- neuronNo
+-- 1
+-- numWeight
+-- 10
+-- dataWidth
+-- 16
+-- weightIntWidth
+-- 4
+-- biasFile
+-- "b_3_1.mif"
+-- weightFile
+-- "w_3_1.mif")
+-- end_signature
+WIDTH=32;
+DEPTH=1;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	0 :	00000000000000001111111110011110;
+END;

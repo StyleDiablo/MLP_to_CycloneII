@@ -1,0 +1,252 @@
+
+State Machine - |cyNet|Layer_3:l3|neuron:n_9|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_3:l3|neuron:n_8|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_3:l3|neuron:n_7|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_3:l3|neuron:n_6|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_3:l3|neuron:n_5|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_3:l3|neuron:n_4|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_3:l3|neuron:n_3|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_3:l3|neuron:n_2|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_3:l3|neuron:n_1|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_3:l3|neuron:n_0|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_2:l2|neuron:n_9|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_2:l2|neuron:n_8|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_2:l2|neuron:n_7|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_2:l2|neuron:n_6|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_2:l2|neuron:n_5|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_2:l2|neuron:n_4|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_2:l2|neuron:n_3|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_2:l2|neuron:n_2|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_2:l2|neuron:n_1|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_2:l2|neuron:n_0|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_15|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_14|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_13|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_12|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_11|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_10|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_9|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_8|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_7|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_6|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_5|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_4|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_3|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_2|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_1|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 
+
+State Machine - |cyNet|Layer_1:l1|neuron:n_0|state
+Name state.ACTIVATE state.ADD_BIAS state.PROCESS state.IDLE 
+state.IDLE 0 0 0 0 
+state.PROCESS 0 0 1 1 
+state.ADD_BIAS 0 1 0 1 
+state.ACTIVATE 1 0 0 1 

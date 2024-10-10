@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Sep 13 20:43:03 2024
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : cyMlp
+Top-level Entity Name : cyMlp
+Family : Cyclone II
+Total logic elements : 34,769
+    Total combinational functions : 32,807
+    Dedicated logic registers : 9,471
+Total registers : 9471
+Total pins : 138
+Total virtual pins : 0
+Total memory bits : 114,048
+Embedded Multiplier 9-bit elements : 70
+Total PLLs : 0

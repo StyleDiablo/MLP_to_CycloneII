@@ -1,0 +1,29 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 's_axi_aclk'
+Slack : -11.268
+TNS   : -69221.352
+
+Type  : Slow Model Hold 's_axi_aclk'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 's_axi_aclk'
+Slack : -1.423
+TNS   : -15174.932
+
+Type  : Fast Model Setup 's_axi_aclk'
+Slack : -5.197
+TNS   : -27174.342
+
+Type  : Fast Model Hold 's_axi_aclk'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 's_axi_aclk'
+Slack : -1.519
+TNS   : -15492.500
+
+------------------------------------------------------------

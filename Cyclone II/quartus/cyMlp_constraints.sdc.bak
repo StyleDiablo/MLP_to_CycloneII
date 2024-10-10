@@ -1,0 +1,16 @@
+# Δημιουργία ρολογιού με περίοδο 10 ns (100 MHz)
+create_clock -name clk -period 10.0 [get_ports s_axi_aclk]
+
+# Περιορισμοί καθυστέρησης εισόδου
+set_input_delay -clock clk -max 3.0 [get_ports {switches}]
+set_input_delay -clock clk -min 1.0 [get_ports {switches}]
+
+# Περιορισμοί καθυστέρησης εξόδου
+set_output_delay -clock clk -max 3.0 [get_ports {lcd_output}]
+set_output_delay -clock clk -min 1.0 [get_ports {lcd_output}]
+
+# Περιορισμός μέγιστου fanout
+set_max_fanout 10 [all_registers]
+
+# Εξαιρέσεις χρονισμού (αν υπάρχουν)
+set_false_path -from [get_ports {s_axi_aresetn}]

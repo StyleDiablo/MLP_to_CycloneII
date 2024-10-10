@@ -1,0 +1,6 @@
+
+State Machine - |cyMlp|state
+Name state.READ_ROM state.WAIT state.IDLE 
+state.IDLE 0 0 0 
+state.READ_ROM 1 0 1 
+state.WAIT 0 1 1 

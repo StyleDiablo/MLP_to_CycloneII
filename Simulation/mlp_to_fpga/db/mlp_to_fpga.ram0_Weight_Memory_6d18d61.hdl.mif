@@ -1,0 +1,32 @@
+-- begin_signature
+-- Weight_Memory(numWeight
+-- 10
+-- neuronNo
+-- 8
+-- layerNo
+-- 3
+-- addressWidth
+-- 4
+-- dataWidth
+-- 16
+-- weightFile
+-- "w_4_8.mif")
+-- end_signature
+WIDTH=16;
+DEPTH=10;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	9 :	1111011010110101;
+	8 :	0000100110101011;
+	7 :	0000100001000000;
+	6 :	1111110100110000;
+	5 :	0000001111001111;
+	4 :	1111011001000011;
+	3 :	0000100011001111;
+	2 :	1111110011111111;
+	1 :	0000001100111001;
+	0 :	1111000000010011;
+END;

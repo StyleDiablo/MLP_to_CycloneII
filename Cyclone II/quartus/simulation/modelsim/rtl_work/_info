@@ -1,0 +1,193 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\thesis\simulation\modelsim
+vcyMlp
+!i10b 1
+!s100 l?iQHR=jVGR;JofSA[J3z0
+IZbX]cjP=[BQVeICS;QT6z0
+V;MG^ABHU<;YO>e?i6dlL@2
+Z1 dC:\altera\13.0sp1\thesis\simulation\modelsim
+w1721053721
+8C:/Thesis/rtl/cyMlp.v
+FC:/Thesis/rtl/cyMlp.v
+L0 4
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1727881175.980000
+!s107 C:/Thesis/rtl/include.v|C:/Thesis/rtl/cyMlp.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Thesis/rtl|C:/Thesis/rtl/cyMlp.v|
+!s101 -O0
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Thesis/rtl -O0
+ncy@mlp
+vinput_ROM
+IzbJHMc9K=9NJ7JB>?6UN13
+VgSz?8Fmd`nARB@U`7=>Rz1
+R1
+w1721048519
+8C:/Thesis/rtl/input_ROM.v
+FC:/Thesis/rtl/input_ROM.v
+L0 3
+R2
+r1
+31
+R3
+R4
+ninput_@r@o@m
+!i10b 1
+!s100 dEIEPa;4XG6P3QNA4eCJj1
+!s85 0
+!s108 1727881174.980000
+!s107 C:/Thesis/rtl/input_ROM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Thesis/rtl|C:/Thesis/rtl/input_ROM.v|
+!s101 -O0
+vLayer_1
+IM@Jz<z_SbS4oDA>T<Xafg0
+V6_M3M?3gn>QdCKUJd>aQY2
+R1
+w1721040216
+8C:/Thesis/rtl/Layer_1.v
+FC:/Thesis/rtl/Layer_1.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@layer_1
+!i10b 1
+!s100 nS[AP[EFD0ebYHbNlRfR72
+!s85 0
+!s108 1727881174.762000
+!s107 C:/Thesis/rtl/Layer_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Thesis/rtl|C:/Thesis/rtl/Layer_1.v|
+!s101 -O0
+vLayer_2
+IJ5Yz6EboaP63Th23<T>3?3
+VEjj36<:foH@G][YDi16m50
+R1
+w1726248311
+8C:/Thesis/rtl/Layer_2.v
+FC:/Thesis/rtl/Layer_2.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@layer_2
+!i10b 1
+!s100 >io7SoZ8_YUHi=SRbgQ8l1
+!s85 0
+!s108 1727881174.544000
+!s107 C:/Thesis/rtl/Layer_2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Thesis/rtl|C:/Thesis/rtl/Layer_2.v|
+!s101 -O0
+vLayer_3
+I=n=a[ITXk^46?2DlD937W1
+V]RZfz5ZMDlMQSLGR5:<Lb1
+R1
+w1721040185
+8C:/Thesis/rtl/Layer_3.v
+FC:/Thesis/rtl/Layer_3.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@layer_3
+!i10b 1
+!s100 1nJNm6AiIBNMAch1EPE2J1
+!s85 0
+!s108 1727881174.356000
+!s107 C:/Thesis/rtl/Layer_3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Thesis/rtl|C:/Thesis/rtl/Layer_3.v|
+!s101 -O0
+vmaxFinder
+IaMDb]HU?:38a:KZ1HGian1
+VYYz8>@n]c?3bK@KEU:H493
+R1
+w1720610284
+8C:/Thesis/rtl/maxFinder.v
+FC:/Thesis/rtl/maxFinder.v
+L0 1
+R2
+r1
+31
+R3
+nmax@finder
+R4
+!i10b 1
+!s100 N>3kGWhK@CjdzWh[RFNMf2
+!s85 0
+!s108 1727881174.122000
+!s107 C:/Thesis/rtl/maxFinder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Thesis/rtl|C:/Thesis/rtl/maxFinder.v|
+!s101 -O0
+vneuron
+IgWz8Bd?bnE=eIFlAR3Va22
+VkE[z;XA[aibNOjo@EEH]m1
+R1
+w1721052369
+8C:/Thesis/rtl/neuron.v
+FC:/Thesis/rtl/neuron.v
+L0 4
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 HHR1nkI0:]7dC?KjcClOj2
+!s85 0
+!s108 1727881175.761000
+!s107 C:/Thesis/rtl/include.v|C:/Thesis/rtl/neuron.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Thesis/rtl|C:/Thesis/rtl/neuron.v|
+!s101 -O0
+vSig_ROM
+I<]RB6lg6g8mL>7E_9VoI?3
+V0dkX6X<FTIfj<eYbZ5CmV0
+R1
+w1716203046
+8C:/Thesis/rtl/Sig_ROM.v
+FC:/Thesis/rtl/Sig_ROM.v
+L0 3
+R2
+r1
+31
+R3
+R4
+n@sig_@r@o@m
+!i10b 1
+!s100 8e_KIW6GXK8LNI2`dPSYf0
+!s85 0
+!s108 1727881175.543000
+!s107 C:/Thesis/rtl/Sig_ROM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Thesis/rtl|C:/Thesis/rtl/Sig_ROM.v|
+!s101 -O0
+vWeight_Memory
+I6J`Ydk12MI1EfgF<Nid_o0
+Vo9F:M3[YSAj?zTacbiGCR2
+R1
+w1721052459
+8C:/Thesis/rtl/Weight_Memory.v
+FC:/Thesis/rtl/Weight_Memory.v
+L0 4
+R2
+r1
+31
+R3
+R4
+n@weight_@memory
+!i10b 1
+!s100 kmj1Yh[=2A7dNGd`hMAf:1
+!s85 0
+!s108 1727881175.308000
+!s107 C:/Thesis/rtl/include.v|C:/Thesis/rtl/Weight_Memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Thesis/rtl|C:/Thesis/rtl/Weight_Memory.v|
+!s101 -O0

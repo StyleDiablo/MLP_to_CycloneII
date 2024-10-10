@@ -1,0 +1,212 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Ohmen\Desktop\Desktop\School\Thesis\mlp_to_fpga\simulation\modelsim
+vaxi_lite_wrapper
+IODS`ijYDG6V9OnmSZ^1o22
+Ve>L7>PbZ^4AK>3lf=AQ7n1
+Z1 dC:\Users\Ohmen\Desktop\Desktop\School\Thesis\mlp_to_fpga\simulation\modelsim
+w1718034378
+8C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/axi_lite_wrapper.v
+FC:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/axi_lite_wrapper.v
+L0 3
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl -O0
+!i10b 1
+!s100 SF_VFK4GPZa4mYYjUY@a63
+!s85 0
+!s108 1727892413.560000
+!s107 C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/axi_lite_wrapper.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl|C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/axi_lite_wrapper.v|
+!s101 -O0
+vcyMlp
+I5LFo@W?H^hFX_@LkU5bR@0
+VnC4SOYU`SDEaYAP?46:gE3
+R1
+w1727876081
+8C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/cyMlp.v
+FC:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/cyMlp.v
+L0 4
+R2
+r1
+31
+R3
+R4
+ncy@mlp
+!i10b 1
+!s100 Q4H9?K@EUhF2bobZgjfoo2
+!s85 0
+!s108 1727892413.897000
+!s107 C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/include.v|C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/cyMlp.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl|C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/cyMlp.v|
+!s101 -O0
+vLayer_1
+Iz?aBGg@8dk[SFUnFObTnO3
+VASUI3>h8125c[3m5DlcLn2
+R1
+w1727888423
+8C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v
+FC:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@layer_1
+!i10b 1
+!s100 Fi588N`G72Xn30iikD3eb0
+!s85 0
+!s108 1727892413.411000
+!s107 C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl|C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v|
+!s101 -O0
+vLayer_2
+I>O=Jza99KO9l3nNKC=K6B3
+V0c[?aebO23KcP?jEm^X=c0
+R1
+w1727888432
+8C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v
+FC:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@layer_2
+!i10b 1
+!s100 1R2WBD@j<dRh1:[aV837T1
+!s85 0
+!s108 1727892413.330000
+!s107 C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl|C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v|
+!s101 -O0
+vLayer_3
+I>PALVU@W_fR]=i9XBgbel1
+Vf87?:QPza<A06fibo_6jL1
+R1
+w1727799389
+8C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v
+FC:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@layer_3
+!i10b 1
+!s100 UfKmLTG:]`[dl>7Q>DELV1
+!s85 0
+!s108 1727892413.257000
+!s107 C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl|C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v|
+!s101 -O0
+vmaxFinder
+I]1Q:;5W[f4AGK[zZKIBLW0
+VbQQAW4VDU`fMdk68GLY>k2
+R1
+w1717523101
+8C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/maxFinder.v
+FC:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/maxFinder.v
+L0 1
+R2
+r1
+31
+R3
+nmax@finder
+R4
+!i10b 1
+!s100 g=DXzTH87ko27AZdX:8ZL2
+!s85 0
+!s108 1727892413.185000
+!s107 C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/maxFinder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl|C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/maxFinder.v|
+!s101 -O0
+vneuron
+I34Z3DQ7g288;bQ4OcO6eA3
+V3HckQN?4P9G8cSCR>NzSC0
+R1
+w1727892384
+8C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v
+FC:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v
+L0 4
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 Dkc]6e0z9_Tl[7Xi7mPE10
+!s85 0
+!s108 1727892413.814000
+!s107 C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/include.v|C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl|C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v|
+!s101 -O0
+vSig_ROM
+I1bbV<NB>Eb>6_2BM1cVc;2
+V0dkX6X<FTIfj<eYbZ5CmV0
+R1
+w1716203045
+8C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Sig_ROM.v
+FC:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Sig_ROM.v
+L0 3
+R2
+r1
+31
+R3
+R4
+n@sig_@r@o@m
+!i10b 1
+!s100 i`TP>=hzP46KV>W@bclJB0
+!s85 0
+!s108 1727892413.729000
+!s107 C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Sig_ROM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl|C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Sig_ROM.v|
+!s101 -O0
+vtop_sim
+!i10b 1
+!s100 MB;gILRK7bg`bMTg];3Q42
+IO0Vomo?S2l?I4IRTQS3C03
+VD]Y9oWflcCzolPIaF6K`M0
+R1
+w1727890019
+8C:/Users/Ohmen/Desktop/Desktop/School/Thesis/mlp_to_fpga/../test-benches/top_sim.v
+FC:/Users/Ohmen/Desktop/Desktop/School/Thesis/mlp_to_fpga/../test-benches/top_sim.v
+L0 7
+R2
+r1
+!s85 0
+31
+!s108 1727892413.985000
+!s107 C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/include.v|C:/Users/Ohmen/Desktop/Desktop/School/Thesis/mlp_to_fpga/../test-benches/top_sim.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/mlp_to_fpga/../test-benches|C:/Users/Ohmen/Desktop/Desktop/School/Thesis/mlp_to_fpga/../test-benches/top_sim.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/mlp_to_fpga/../test-benches -O0
+vWeight_Memory
+IQ4b;OQGecK@b97ejU;iN93
+Vo9F:M3[YSAj?zTacbiGCR2
+R1
+w1727872734
+8C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v
+FC:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v
+L0 4
+R2
+r1
+31
+R3
+R4
+n@weight_@memory
+!i10b 1
+!s100 6_[_H2_DG@<DO>kTa5_S`0
+!s85 0
+!s108 1727892413.645000
+!s107 C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/include.v|C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl|C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v|
+!s101 -O0

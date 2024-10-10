@@ -1,0 +1,666 @@
+# Reading A:/altera/modelsim_ase/tcl/vsim/pref.tcl 
+# do cyNet_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying A:\altera\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied A:\altera\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl {C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/maxFinder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module maxFinder
+# 
+# Top level modules:
+# 	maxFinder
+# vlog -vlog01compat -work work +incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl {C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Layer_3
+# 
+# Top level modules:
+# 	Layer_3
+# vlog -vlog01compat -work work +incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl {C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Layer_2
+# 
+# Top level modules:
+# 	Layer_2
+# vlog -vlog01compat -work work +incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl {C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Layer_1
+# 
+# Top level modules:
+# 	Layer_1
+# vlog -vlog01compat -work work +incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl {C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/include.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# vlog -vlog01compat -work work +incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl {C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/axi_lite_wrapper.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module axi_lite_wrapper
+# 
+# Top level modules:
+# 	axi_lite_wrapper
+# vlog -vlog01compat -work work +incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl {C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Weight_Memory
+# 
+# Top level modules:
+# 	Weight_Memory
+# vlog -vlog01compat -work work +incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl {C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Sig_ROM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Sig_ROM
+# 
+# Top level modules:
+# 	Sig_ROM
+# vlog -vlog01compat -work work +incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl {C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module neuron
+# 
+# Top level modules:
+# 	neuron
+# vlog -vlog01compat -work work +incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl {C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/cyMlp.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cyMlp
+# 
+# Top level modules:
+# 	cyMlp
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Ohmen/Desktop/Desktop/School/Thesis/mlp_to_fpga/../test-benches {C:/Users/Ohmen/Desktop/Desktop/School/Thesis/mlp_to_fpga/../test-benches/top_sim.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top_sim
+# 
+# Top level modules:
+# 	top_sim
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  top_sim
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps top_sim 
+# Loading work.top_sim
+# Loading work.cyMlp
+# Loading work.axi_lite_wrapper
+# Loading work.Layer_1
+# Loading work.neuron
+# Loading work.Weight_Memory
+# Loading work.Sig_ROM
+# Loading work.Layer_2
+# Loading work.Layer_3
+# Loading work.maxFinder
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/mlp_to_fpga/../test-benches/top_sim.v(64): [PCDPC] - Port size (5 or 5) does not match connection size (32) for port 's_axi_awaddr'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/cyMlp.v(17).
+# 
+#         Region: /top_sim/dut
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/mlp_to_fpga/../test-benches/top_sim.v(64): [PCDPC] - Port size (3 or 3) does not match connection size (32) for port 's_axi_awprot'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/cyMlp.v(18).
+# 
+#         Region: /top_sim/dut
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/mlp_to_fpga/../test-benches/top_sim.v(64): [PCDPC] - Port size (5 or 5) does not match connection size (32) for port 's_axi_araddr'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/cyMlp.v(28).
+# 
+#         Region: /top_sim/dut
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/mlp_to_fpga/../test-benches/top_sim.v(64): [PCDPC] - Port size (3 or 3) does not match connection size (32) for port 's_axi_arprot'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/cyMlp.v(29).
+# 
+#         Region: /top_sim/dut
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(29): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_0
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_0/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(43): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_1
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_1/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(57): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_2
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_2/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(71): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_3
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_3/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(85): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_4
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_4/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(99): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_5
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_5/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(113): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_6
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_6/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(127): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_7
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_7/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(141): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_8
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_8/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(155): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_9
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_9/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(169): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_10
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_10/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(183): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_11
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_11/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(197): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_12
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_12/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(211): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_13
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_13/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(225): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_14
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_14/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(239): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_15
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_15/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(252): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_16
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_16/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(267): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_17
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_17/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(281): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_18
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_18/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(295): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_19
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_19/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(309): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_20
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_20/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(323): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_21
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_21/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(337): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_22
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_22/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(351): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_23
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_23/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(365): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_24
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_24/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(379): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_25
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_25/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(393): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_26
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_26/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(407): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_27
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_27/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(421): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_28
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_28/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(435): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_29
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_29/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(449): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_30
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_30/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(463): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_31
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_31/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(477): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_32
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_32/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(491): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_33
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_33/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(505): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_34
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_34/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(519): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_35
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_35/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(533): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_36
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_36/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(547): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_37
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_37/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(561): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_38
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_38/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(575): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_39
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_39/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(589): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_40
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_40/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(603): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_41
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_41/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(617): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_42
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_42/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(631): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_43
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_43/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_1.v(645): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l1/n_44
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l1/n_44/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(29): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_0
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_0/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(43): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_1
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_1/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(57): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_2
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_2/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(71): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_3
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_3/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(85): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_4
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_4/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(99): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_5
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_5/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(113): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_6
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_6/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(127): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_7
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_7/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(141): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_8
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_8/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(155): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_9
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_9/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(169): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_10
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_10/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(183): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_11
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_11/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(197): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_12
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_12/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(211): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_13
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_13/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(225): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_14
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_14/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(239): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_15
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_15/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(252): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_16
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_16/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(267): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_17
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_17/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(281): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_18
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_18/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(295): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_19
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_19/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(309): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_20
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_20/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(323): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_21
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_21/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(337): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_22
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_22/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(351): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_23
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_23/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(365): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_24
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_24/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(379): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_25
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_25/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(393): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_26
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_26/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(407): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_27
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_27/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(421): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_28
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_28/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(435): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_29
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_29/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(449): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_30
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_30/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(463): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_31
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_31/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(477): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_32
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_32/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(491): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_33
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_33/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(505): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_34
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_34/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(519): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_35
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_35/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_2.v(533): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l2/n_36
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l2/n_36/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v(29): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l3/n_0
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l3/n_0/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v(43): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l3/n_1
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l3/n_1/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v(57): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l3/n_2
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l3/n_2/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v(71): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l3/n_3
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l3/n_3/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v(85): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l3/n_4
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l3/n_4/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v(99): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l3/n_5
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l3/n_5/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v(113): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l3/n_6
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l3/n_6/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v(127): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l3/n_7
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l3/n_7/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v(141): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l3/n_8
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l3/n_8/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Layer_3.v(155): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'weightValue'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(20).
+# 
+#         Region: /top_sim/dut/l3/n_9
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v(155): [PCDPC] - Port size (6 or 6) does not match connection size (7) for port 'radd'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/Weight_Memory.v(10).
+# 
+#         Region: /top_sim/dut/l3/n_9/weight_memory
+# ** Warning: (vsim-3015) C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/cyMlp.v(276): [PCDPC] - Port size (1 or 1) does not match connection size (10) for port 'i_valid'. The port definition is at: C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/maxFinder.v(7).
+# 
+#         Region: /top_sim/dut/hMax
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Configuration completed                      0 ns
+# Reading file:                  C:/Users/Ohmen/Desktop/Desktop/School/Thesis/test_data/test_data/test_data_0000.txt
+# Break key hit 
+# Break in Module neuron at C:/Users/Ohmen/Desktop/Desktop/School/Thesis/rtl/neuron.v line 70

@@ -1,0 +1,32 @@
+-- begin_signature
+-- Weight_Memory(numWeight
+-- 10
+-- neuronNo
+-- 9
+-- layerNo
+-- 3
+-- addressWidth
+-- 4
+-- dataWidth
+-- 16
+-- weightFile
+-- "C:/Users/Ohmen/Desktop/Desktop/School/Thesis/tensorflow/w_b/w_3_9.mif")
+-- end_signature
+WIDTH=16;
+DEPTH=10;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	9 :	0000010101000000;
+	8 :	0000110111011010;
+	7 :	1111010010110000;
+	6 :	1111100000010000;
+	5 :	1111010000010111;
+	4 :	0000001010110100;
+	3 :	0000000000001101;
+	2 :	0000010111111001;
+	1 :	1111111000101101;
+	0 :	1111101001111101;
+END;
